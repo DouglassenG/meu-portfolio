@@ -14,7 +14,7 @@ import { TypingText } from "@/components/ui/TypingText";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col items-center justify-center min-h-[80vh] px-4 md:px-40 py-10">
+    <section className="flex flex-col items-center justify-center min-h-screen px-4 md:px-40 py-10">
       <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-[1200px] gap-10">
         <div className="flex-1 space-y-4 flex flex-col items-center md:items-start text-center md:text-left">
           <div className="flex flex-col items-center md:items-start w-full">
@@ -40,7 +40,7 @@ const Hero = () => {
                 <Globe size={24} />
                 <Layers size={24} />
               </div>
-              <p className="text-base md:text-lg text-white/80 md:text-[var(--muted)]/90 leading-relaxed text-justify md:text-left">
+              <p className="text-base md:text-lg text-white/80 md:text-[var(--muted)]/90 leading-relaxed text-justify md:text-left flex items-center">
                 Transformando ideias complexas em experiências digitais fluidas.
                 Com domínio do front ao back-end, construo arquiteturas robustas
                 e interfaces intuitivas que impulsionam o sucesso do seu

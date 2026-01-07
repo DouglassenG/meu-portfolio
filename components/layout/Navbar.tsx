@@ -1,8 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import React, { useState } from "react";
 import { theme } from "@/src/styles";
-import { Plus, Github, Linkedin, Mail, Code2 } from "lucide-react";
+import { Menu, X, Github, Linkedin, Mail, Code2 } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,18 +17,23 @@ const Navbar = () => {
   return (
     <>
       <nav className="sticky top-0 z-50 flex justify-between items-center py-6 px-4 md:px-40 md:bg-black/40 md:backdrop-blur-md md:border-b md:border-white/5">
-        {/* Desktop Left Group: Menu + Social */}
+        {/* Brand */}
+        <div className="flex items-center" style={{ color: theme.colors.foreground }}>
+          <Code2 size={32} />
+        </div>
+
+        {/* Desktop Right Group: Menu + Social */}
         <div className="hidden md:flex items-center gap-8">
           <ul className="flex gap-8 list-none">
             {menuItems.map((item) => (
               <li key={item.label}>
-                <a
+                <Link
                   href={item.href}
                   className="relative text-sm uppercase tracking-widest hover:opacity-100 transition-opacity after:content-[''] after:absolute after:w-0 after:h-[2px] after:bottom-[-4px] after:left-0 after:bg-[var(--accent)] hover:after:w-full after:transition-all after:duration-300"
                   style={{ color: theme.colors.foreground }}
                 >
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -61,32 +67,21 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Brand */}
-        <div className="flex items-center gap-2" style={{ color: theme.colors.foreground }}>
-          <Code2 size={32} />
-          <span className="text-xl font-bold">Douglas Michelini</span>
-        </div>
-
         {/* Mobile Toggle Button */}
-        <div className="md:hidden z-[70]">
+        <div className="md:hidden z-[70] flex items-center">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={`transition-all duration-500 ease-in-out focus:outline-none text-white`}
+            className="transition-all duration-500 ease-in-out focus:outline-none text-white flex items-center"
             aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
           >
-            <Plus
-              size={32}
-              className={`transition-transform duration-500 ease-in-out ${
-                isOpen ? "rotate-[135deg]" : "rotate-0"
-              }`}
-            />
+            {isOpen ? <X size={32} /> : <Menu size={32} />}
           </button>
         </div>
       </nav>
 
-      {/* Mobile Sidebar & Backdrop */}
+      {/* Mobile Menu & Backdrop */}
       <div
-        className={`fixed inset-0 z-[60] md:hidden transition-visibility duration-300 ${
+        className={`fixed inset-0 z-[60] md:hidden transition-all duration-300 ${
           isOpen ? "visible" : "invisible"
         }`}
       >
@@ -98,34 +93,33 @@ const Navbar = () => {
           onClick={() => setIsOpen(false)}
         />
 
-        {/* Sidebar Content */}
+        {/* Menu Content - Slides from Top */}
         <div
-          className={`absolute left-0 top-0 h-full w-[80%] max-w-sm shadow-2xl transition-transform duration-300 ease-out flex flex-col p-12 bg-black/40 backdrop-blur-md border-r border-white/5 ${
-            isOpen ? "translate-x-0" : "-translate-x-full"
+          className={`absolute left-0 top-0 w-full shadow-2xl transition-transform duration-500 ease-in-out flex flex-col items-center p-12 bg-black/90 backdrop-blur-xl border-b border-white/5 ${
+            isOpen ? "translate-y-0" : "-translate-y-full"
           }`}
         >
-          {/* Mobile Brand */}
-          <div className="flex items-center gap-2 mb-10" style={{ color: theme.colors.foreground }}>
-            <Code2 size={32} />
-            <span className="text-xl font-bold">Douglas Michelini</span>
+          {/* Mobile Brand (Optional, but keeping for structure) */}
+          <div className="flex items-center mb-10" style={{ color: theme.colors.foreground }}>
+            <Code2 size={48} />
           </div>
 
           {/* Menu Links */}
-          <div className="flex flex-col gap-8 items-start">
+          <div className="flex flex-col gap-8 items-center">
             {menuItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
                 className="text-lg uppercase tracking-widest hover:text-[var(--accent)] transition-colors text-white"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </div>
 
           {/* Mobile Social Icons */}
-          <div className="flex gap-6 mt-12">
+          <div className="flex gap-8 mt-12">
             <a
               href="https://github.com/DouglassenG/"
               target="_blank"
