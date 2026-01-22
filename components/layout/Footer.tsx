@@ -13,7 +13,7 @@ const Footer = () => {
 
   return (
     <footer
-      className="w-full py-12 px-4 md:px-40 flex flex-col items-center justify-center"
+      className="w-full py-4 px-4 md:px-40 flex flex-col items-center justify-center"
       style={{
         backgroundColor: theme.colors.accent,
         borderTop: `1px solid ${theme.colors.border}`,
@@ -27,7 +27,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="hover:opacity-70 transition-opacity"
           >
-            <Github size={32} style={{ color: "#171717" }} />
+            <Github size={24} style={{ color: "#171717" }} />
           </a>
           <a
             href="https://www.linkedin.com/in/douglas-michelini/"
@@ -35,13 +35,13 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="hover:opacity-70 transition-opacity"
           >
-            <Linkedin size={32} style={{ color: "#171717" }} />
+            <Linkedin size={24} style={{ color: "#171717" }} />
           </a>
           <a
             href="mailto:contatodmichelini97@gmail.com"
             className="hover:opacity-70 transition-opacity"
           >
-            <Mail size={32} style={{ color: "#171717" }} />
+            <Mail size={24} style={{ color: "#171717" }} />
           </a>
         </div>
 
@@ -49,7 +49,7 @@ const Footer = () => {
           className="text-center text-sm space-y-1 mt-4 font-medium"
           style={{ color: "#171717" }}
         >
-          <p>&copy; {year} Douglas Michelini. Todos os direitos reservados.</p>
+          <p>&copy; {year} Douglas Michelini | Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

@@ -3,7 +3,15 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { theme } from "@/src/styles";
-import { Menu, X, Github, Linkedin, Mail, Code2 } from "lucide-react";
+import {
+  Menu,
+  X,
+  Github,
+  Linkedin,
+  Mail,
+  Code2,
+  Phone,
+} from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +25,10 @@ const Navbar = () => {
     <>
       <nav className="sticky top-0 z-50 flex justify-between items-center py-6 px-4 md:px-40 md:bg-black/40 md:backdrop-blur-md md:border-b md:border-white/5">
         {/* Brand */}
-        <div className="flex items-center" style={{ color: theme.colors.foreground }}>
+        <div
+          className="flex items-center"
+          style={{ color: theme.colors.foreground }}
+        >
           <Code2 size={32} />
         </div>
 
@@ -63,6 +74,15 @@ const Navbar = () => {
             >
               <Mail size={24} />
             </a>
+            <a
+              href="https://api.whatsapp.com/send?phone=051996979539"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[var(--accent)] transition-all ease-in-out hover:scale-110 duration-500"
+              style={{ color: theme.colors.foreground }}
+            >
+              <Phone size={24} />
+            </a>
           </div>
         </div>
 
@@ -99,7 +119,10 @@ const Navbar = () => {
           }`}
         >
           {/* Mobile Brand (Optional, but keeping for structure) */}
-          <div className="flex items-center mb-10" style={{ color: theme.colors.foreground }}>
+          <div
+            className="flex items-center mb-10"
+            style={{ color: theme.colors.foreground }}
+          >
             <Code2 size={48} />
           </div>
 
@@ -141,11 +164,20 @@ const Navbar = () => {
             >
               <Mail size={24} />
             </a>
+            <a
+              href="https://api.whatsapp.com/send?phone=051996979539"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-[var(--accent)] transition-all ease-in-out hover:scale-110 duration-500"
+            >
+              <Phone size={24} />
+            </a>
           </div>
         </div>
       </div>
     </>
   );
 };
+
 
 export default Navbar;
