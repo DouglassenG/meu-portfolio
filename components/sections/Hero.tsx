@@ -20,12 +20,12 @@ const Hero = () => {
       <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-[1200px] gap-10">
         <div className="flex-1 space-y-4 flex flex-col items-center md:items-start text-center md:text-left">
           <div className="flex flex-col items-center md:items-start w-full">
-            <h1 className="text-2xl md:text-5xl font-bold leading-tight mb-4 md:mb-0 text-white md:text-[var(--foreground)]">
+            <h1 className="text-2xl md:text-5xl font-bold leading-tight mb-4 md:mb-0 text-gray-100 md:text-gray-50">
               <TypingText text="Douglas Michelini" speed={150} />
             </h1>
 
             <div className="flex flex-col md:flex-row items-center gap-6 md:gap-4 w-full justify-center md:justify-start">
-              <p className="text-sm md:text-lg uppercase tracking-[0.2em] md:tracking-[0.3em] font-medium text-white md:text-[var(--muted)]">
+              <p className="text-sm md:text-lg uppercase tracking-[0.2em] md:tracking-[0.3em] font-medium text-gray-200 md:text-gray-100">
                 <TypingText
                   text="Desenvolvedor Front-End"
                   speed={100}
@@ -35,14 +35,14 @@ const Hero = () => {
             </div>
 
             <div className="mt-6 md:mt-8 space-y-6 w-full max-w-lg">
-              <div className="flex gap-4 justify-center md:justify-start text-white md:text-[var(--muted)] opacity-80">
+              <div className="flex gap-4 justify-center md:justify-start text-gray-200 md:text-gray-100 opacity-80">
                 <Code2 size={24} />
                 <Database size={24} />
                 <Cpu size={24} />
                 <Globe size={24} />
                 <Layers size={24} />
               </div>
-              <p className="text-base md:text-lg text-white/80 md:text-[var(--muted)]/90 leading-relaxed text-justify md:text-left flex items-center">
+              <p className="text-base md:text-lg text-gray-300 md:text-gray-200 leading-relaxed text-justify md:text-left flex items-center">
                 Transformando ideias complexas em experiências digitais fluidas.
                 Com domínio do front ao back-end, construo arquiteturas robustas
                 e interfaces intuitivas que impulsionam o sucesso do seu
