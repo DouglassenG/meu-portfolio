@@ -1,13 +1,10 @@
-import Navbar from '@/components/layout/Navbar';
-import Hero from '@/components/sections/Hero';
-import Footer from '@/components/layout/Footer';
-import { theme } from '@/src/styles';
+import Navbar from "@/components/layout/Navbar";
+import Hero from "@/components/sections/Hero";
+import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
-    <main 
-      className="min-h-screen"
-    >
+    <main className="min-h-screen">
       <Navbar />
       <Hero />
       <Footer />

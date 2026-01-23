@@ -10,8 +10,8 @@ import {
   Linkedin,
   Mail,
   Code2,
-  Phone,
 } from "lucide-react";
+import WhatsappIcon from "@/components/ui/WhatsappIcon";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +29,7 @@ const Navbar = () => {
           className="flex items-center"
           style={{ color: theme.colors.foreground }}
         >
-          <Code2 size={32} />
+          <Code2 size={28} />
         </div>
 
         {/* Desktop Right Group: Menu + Social */}
@@ -39,7 +39,7 @@ const Navbar = () => {
               <li key={item.label}>
                 <Link
                   href={item.href}
-                  className="relative text-sm uppercase tracking-widest hover:opacity-100 transition-opacity after:content-[''] after:absolute after:w-0 after:h-[2px] after:bottom-[-4px] after:left-0 after:bg-[var(--accent)] hover:after:w-full after:transition-all after:duration-300"
+                  className="relative text-xs uppercase tracking-widest hover:opacity-100 transition-opacity after:content-[''] after:absolute after:w-0 after:h-[2px] after:bottom-[-4px] after:left-0 after:bg-[var(--accent)] hover:after:w-full after:transition-all after:duration-300"
                   style={{ color: theme.colors.foreground }}
                 >
                   {item.label}
@@ -56,7 +56,7 @@ const Navbar = () => {
               className="hover:text-[var(--accent)] transition-all ease-in-out hover:scale-110 duration-500"
               style={{ color: theme.colors.foreground }}
             >
-              <Github size={24} />
+              <Github size={20} />
             </a>
             <a
               href="https://www.linkedin.com/in/douglas-michelini/"
@@ -65,23 +65,23 @@ const Navbar = () => {
               className="hover:text-[var(--accent)] transition-all ease-in-out hover:scale-110 duration-500"
               style={{ color: theme.colors.foreground }}
             >
-              <Linkedin size={24} />
+              <Linkedin size={20} />
             </a>
             <a
               href="mailto:contatodmichelini97@gmail.com"
               className="hover:text-[var(--accent)] transition-all ease-in-out hover:scale-110 duration-500"
               style={{ color: theme.colors.foreground }}
             >
-              <Mail size={24} />
+              <Mail size={20} />
             </a>
             <a
               href="https://api.whatsapp.com/send?phone=051996979539"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[var(--accent)] transition-all ease-in-out hover:scale-110 duration-500"
+              className="hover:text-green-500 transition-all ease-in-out hover:scale-110 duration-500"
               style={{ color: theme.colors.foreground }}
             >
-              <Phone size={24} />
+              <WhatsappIcon size={20} />
             </a>
           </div>
         </div>
@@ -93,7 +93,7 @@ const Navbar = () => {
             className="transition-all duration-500 ease-in-out focus:outline-none text-white flex items-center"
             aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
           >
-            {isOpen ? <X size={32} /> : <Menu size={32} />}
+            {isOpen ? <div style={{ width: 28 }} /> : <Menu size={28} />}
           </button>
         </div>
       </nav>
@@ -118,12 +118,19 @@ const Navbar = () => {
             isOpen ? "translate-y-0" : "-translate-y-full"
           }`}
         >
+          <button
+            onClick={() => setIsOpen(false)}
+            className="absolute top-6 right-4 text-white focus:outline-none"
+            aria-label="Fechar menu"
+          >
+            <X size={28} />
+          </button>
           {/* Mobile Brand (Optional, but keeping for structure) */}
           <div
             className="flex items-center mb-10"
             style={{ color: theme.colors.foreground }}
           >
-            <Code2 size={48} />
+            <Code2 size={28} />
           </div>
 
           {/* Menu Links */}
@@ -133,7 +140,7 @@ const Navbar = () => {
                 key={item.label}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="text-lg uppercase tracking-widest hover:text-[var(--accent)] transition-colors text-white"
+                className="text-xs uppercase tracking-widest hover:text-[var(--accent)] transition-colors text-white"
               >
                 {item.label}
               </Link>
@@ -148,7 +155,7 @@ const Navbar = () => {
               rel="noopener noreferrer"
               className="text-white hover:text-[var(--accent)] transition-all ease-in-out hover:scale-110 duration-500"
             >
-              <Github size={24} />
+              <Github size={18} />
             </a>
             <a
               href="https://www.linkedin.com/in/douglas-michelini/"
@@ -156,21 +163,21 @@ const Navbar = () => {
               rel="noopener noreferrer"
               className="text-white hover:text-[var(--accent)] transition-all ease-in-out hover:scale-110 duration-500"
             >
-              <Linkedin size={24} />
+              <Linkedin size={18} />
             </a>
             <a
               href="mailto:contatodmichelini97@gmail.com"
               className="text-white hover:text-[var(--accent)] transition-all ease-in-out hover:scale-110 duration-500"
             >
-              <Mail size={24} />
+              <Mail size={18} />
             </a>
             <a
               href="https://api.whatsapp.com/send?phone=051996979539"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-[var(--accent)] transition-all ease-in-out hover:scale-110 duration-500"
+              className="text-white hover:text-green-500 transition-all ease-in-out hover:scale-110 duration-500"
             >
-              <Phone size={24} />
+              <WhatsappIcon size={18} />
             </a>
           </div>
         </div>
@@ -178,6 +185,5 @@ const Navbar = () => {
     </>
   );
 };
-
 
 export default Navbar;

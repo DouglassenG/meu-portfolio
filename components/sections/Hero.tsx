@@ -36,11 +36,11 @@ const Hero = () => {
 
             <div className="mt-6 md:mt-8 space-y-6 w-full max-w-lg">
               <div className="flex gap-4 justify-center md:justify-start text-gray-200 md:text-gray-100 opacity-80">
-                <Code2 size={24} />
-                <Database size={24} />
-                <Cpu size={24} />
-                <Globe size={24} />
-                <Layers size={24} />
+                <Code2 size={18} />
+                <Database size={18} />
+                <Cpu size={18} />
+                <Globe size={18} />
+                <Layers size={18} />
               </div>
               <p className="text-base md:text-lg text-gray-300 md:text-gray-200 leading-relaxed text-justify md:text-left flex items-center">
                 Transformando ideias complexas em experiências digitais fluidas.
@@ -60,7 +60,7 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 className="hover:text-[var(--accent)] transition-colors hover:scale-110 duration-300 text-white md:text-[var(--foreground)]"
               >
-                <Github size={32} />
+                <Github size={24} />
               </a>
               <a
                 href="https://www.linkedin.com/in/douglas-michelini/"
@@ -68,13 +68,13 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 className="hover:text-[var(--accent)] transition-colors hover:scale-110 duration-300 text-white md:text-[var(--foreground)]"
               >
-                <Linkedin size={32} />
+                <Linkedin size={24} />
               </a>
               <a
                 href="mailto:contatodmichelini97@gmail.com"
                 className="hover:text-[var(--accent)] transition-colors hover:scale-110 duration-300 text-white md:text-[var(--foreground)]"
               >
-                <Mail size={32} />
+                <Mail size={24} />
               </a>
             </div>
           </div>
