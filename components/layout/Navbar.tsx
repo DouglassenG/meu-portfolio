@@ -11,7 +11,7 @@ import {
   Mail,
   Code2,
 } from "lucide-react";
-import WhatsappIcon from "@/components/ui/WhatsappIcon";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -81,7 +81,7 @@ const Navbar = () => {
               className="hover:text-green-500 transition-all ease-in-out hover:scale-110 duration-500"
               style={{ color: theme.colors.foreground }}
             >
-              <WhatsappIcon size={20} />
+              <img src="/whatsapp.svg" alt="Whatsapp" width={20} height={20} style={{ filter: "invert(1) brightness(2)" }} />
             </a>
           </div>
         </div>
@@ -177,7 +177,7 @@ const Navbar = () => {
               rel="noopener noreferrer"
               className="text-white hover:text-green-500 transition-all ease-in-out hover:scale-110 duration-500"
             >
-              <WhatsappIcon size={18} />
+              <img src="/whatsapp.svg" alt="Whatsapp" width={18} height={18} style={{ filter: "invert(1) brightness(2)" }} />
             </a>
           </div>
         </div>
