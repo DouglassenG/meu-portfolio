@@ -7,34 +7,7 @@ const projects = [
     title: "Astrologia do Norte",
     githubUrl: "#",
     siteUrl: "#",
-  },
-  {
-    id: 2,
-    src: "/portfolio/calculadora_imc.png",
-    title: "Calculadora IMC",
-    githubUrl: "#",
-    siteUrl: "#",
-  },
-  {
-    id: 3,
-    src: "/portfolio/clone_disney+.png",
-    title: "Clone Disney+",
-    githubUrl: "#",
-    siteUrl: "#",
-  },
-  {
-    id: 4,
-    src: "/portfolio/efood.png",
-    title: "Efood",
-    githubUrl: "#",
-    siteUrl: "#",
-  },
-  {
-    id: 5,
-    src: "/portfolio/github_api.png",
-    title: "Github API",
-    githubUrl: "#",
-    siteUrl: "#",
+    hoverColor: "#2c3e50",
   },
   {
     id: 6,
@@ -42,34 +15,7 @@ const projects = [
     title: "KR Studio",
     githubUrl: "https://github.com/DouglassenG/kr_studio",
     siteUrl: "https://github.com/DouglassenG/kr_studio",
-  },
-  {
-    id: 7,
-    src: "/portfolio/minhas_tarefas.png",
-    title: "Minhas Tarefas",
-    githubUrl: "#",
-    siteUrl: "#",
-  },
-  {
-    id: 8,
-    src: "/portfolio/projeto_2.png",
-    title: "Projeto 2",
-    githubUrl: "#",
-    siteUrl: "#",
-  },
-  {
-    id: 9,
-    src: "/portfolio/sorteador.png",
-    title: "Sorteador",
-    githubUrl: "#",
-    siteUrl: "#",
-  },
-  {
-    id: 10,
-    src: "/portfolio/todo_vue.png",
-    title: "Todo Vue",
-    githubUrl: "#",
-    siteUrl: "#",
+    hoverColor: "#34495e",
   },
   {
     id: 11,
@@ -77,6 +23,71 @@ const projects = [
     title: "Universo Hamburguer",
     githubUrl: "#",
     siteUrl: "#",
+    hoverColor: "#e67e22",
+  },
+  {
+    id: 3,
+    src: "/portfolio/clone_disney+.png",
+    title: "Clone Disney+",
+    githubUrl: "#",
+    siteUrl: "#",
+    hoverColor: "#1d3557",
+  },
+  {
+    id: 7,
+    src: "/portfolio/minhas_tarefas.png",
+    title: "Minhas Tarefas",
+    githubUrl: "#",
+    siteUrl: "#",
+    hoverColor: "#8e44ad",
+  },
+  {
+    id: 5,
+    src: "/portfolio/github_api.png",
+    title: "Github API",
+    githubUrl: "#",
+    siteUrl: "#",
+    hoverColor: "#2c3e50",
+  },
+  {
+    id: 2,
+    src: "/portfolio/calculadora_imc.png",
+    title: "Calculadora IMC",
+    githubUrl: "#",
+    siteUrl: "#",
+    hoverColor: "#16a085",
+  },
+  {
+    id: 8,
+    src: "/portfolio/projeto_2.png",
+    title: "Projeto 2",
+    githubUrl: "#",
+    siteUrl: "#",
+    hoverColor: "#2980b9",
+  },
+  {
+    id: 9,
+    src: "/portfolio/sorteador.png",
+    title: "Sorteador",
+    githubUrl: "#",
+    siteUrl: "#",
+    hoverColor: "#27ae60",
+  },
+  {
+    id: 10,
+    src: "/portfolio/todo_vue.png",
+    title: "Todo Vue",
+    githubUrl: "#",
+    siteUrl: "#",
+    hoverColor: "#1abc9c",
+  },
+  {
+    id: 4,
+    src: "/portfolio/efood.png",
+    title: "Efood",
+    githubUrl: "#",
+    siteUrl: "#",
+    hoverColor: "#c0392b",
   },
 ];
 
@@ -100,6 +111,7 @@ const Portfolio = () => {
             title={project.title}
             githubUrl={project.githubUrl}
             siteUrl={project.siteUrl}
+            hoverColor={project.hoverColor}
           />
         ))}
       </div>
