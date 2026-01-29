@@ -6,6 +6,9 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit" // Mantenha a linha
   },
-  "eslint.nodePath": "./node_modules" // Mantenha este hack para tentar resolver
-  // ... outras configurações
+  "[json]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false
+  }
 }

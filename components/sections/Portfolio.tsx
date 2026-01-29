@@ -1,41 +1,107 @@
-import React from 'react';
-import { theme } from '@/src/styles';
-import ProjectCard from '../ui/ProjectCard';
+import ProjectCard from "../ui/ProjectCard";
 
 const projects = [
-  { id: 1, src: '/window.svg', title: 'Project 1' },
-  { id: 2, src: '/globe.svg', title: 'Project 2' },
-  { id: 3, src: '/file.svg', title: 'Project 3' },
-  { id: 4, src: '/window.svg', title: 'Project 4' },
-  { id: 5, src: '/globe.svg', title: 'Project 5' },
-  { id: 6, src: '/file.svg', title: 'Project 6' },
+  {
+    id: 1,
+    src: "/portfolio/astrologia_do_norte.png",
+    title: "Astrologia do Norte",
+    githubUrl: "#",
+    siteUrl: "#",
+  },
+  {
+    id: 2,
+    src: "/portfolio/calculadora_imc.png",
+    title: "Calculadora IMC",
+    githubUrl: "#",
+    siteUrl: "#",
+  },
+  {
+    id: 3,
+    src: "/portfolio/clone_disney+.png",
+    title: "Clone Disney+",
+    githubUrl: "#",
+    siteUrl: "#",
+  },
+  {
+    id: 4,
+    src: "/portfolio/efood.png",
+    title: "Efood",
+    githubUrl: "#",
+    siteUrl: "#",
+  },
+  {
+    id: 5,
+    src: "/portfolio/github_api.png",
+    title: "Github API",
+    githubUrl: "#",
+    siteUrl: "#",
+  },
+  {
+    id: 6,
+    src: "/portfolio/kr_studio.jpg",
+    title: "KR Studio",
+    githubUrl: "https://github.com/DouglassenG/kr_studio",
+    siteUrl: "https://github.com/DouglassenG/kr_studio",
+  },
+  {
+    id: 7,
+    src: "/portfolio/minhas_tarefas.png",
+    title: "Minhas Tarefas",
+    githubUrl: "#",
+    siteUrl: "#",
+  },
+  {
+    id: 8,
+    src: "/portfolio/projeto_2.png",
+    title: "Projeto 2",
+    githubUrl: "#",
+    siteUrl: "#",
+  },
+  {
+    id: 9,
+    src: "/portfolio/sorteador.png",
+    title: "Sorteador",
+    githubUrl: "#",
+    siteUrl: "#",
+  },
+  {
+    id: 10,
+    src: "/portfolio/todo_vue.png",
+    title: "Todo Vue",
+    githubUrl: "#",
+    siteUrl: "#",
+  },
+  {
+    id: 11,
+    src: "/portfolio/universo_hamburguer.png",
+    title: "Universo Hamburguer",
+    githubUrl: "#",
+    siteUrl: "#",
+  },
 ];
 
 const Portfolio = () => {
   return (
-    <section 
-      className="py-20 px-4 md:px-40 flex flex-col items-center"
-    >
-      {/* Title Section */}
-      <div className="mb-16 text-center space-y-4">
-        <h2 className="text-sm font-bold uppercase tracking-[0.3em] border-b-4 pb-2 text-white md:text-[var(--foreground)]" 
-            style={{ 
-              borderColor: theme.colors.accent 
-            }}>
-            Portfolio
+    <section className="py-20 px-4 md:px-20 flex flex-col items-center">
+      <div className="mb-12 text-center">
+        <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white">
+          Portfólio
         </h2>
+        <p className="text-muted-foreground mt-2">
+          Confira alguns dos meus projetos.
+        </p>
       </div>
 
-      {/* Grid Content 
-          Mobile: 1 Column
-          Desktop: 2 Columns
-      */}
-      <div className="w-full max-w-[1200px] grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
-         {projects.map(p => (
-            <div key={p.id} className="w-full">
-                <ProjectCard imageSrc={p.src} title={p.title} />
-            </div>
-         ))}
+      <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-6">
+        {projects.map((project) => (
+          <ProjectCard
+            key={project.id}
+            imageSrc={project.src}
+            title={project.title}
+            githubUrl={project.githubUrl}
+            siteUrl={project.siteUrl}
+          />
+        ))}
       </div>
     </section>
   );
