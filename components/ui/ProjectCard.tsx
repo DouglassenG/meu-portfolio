@@ -11,7 +11,7 @@ interface ProjectCardProps {
 }
 
 // Helper function to darken a hex color
-function darkenHexColor(hex, factor = 0.8) {
+function darkenHexColor(hex: string, factor: number = 0.8): string {
   if (!hex || hex.length !== 7 || hex[0] !== "#") {
     // Handle invalid hex codes, return original or a default dark color
     return "#000000";
@@ -45,7 +45,7 @@ const ProjectCard = ({
   };
 
   return (
-    <div className="rounded-lg overflow-hidden group relative shadow-lg">
+    <div className="rounded-lg overflow-hidden group relative shadow-md hover:shadow-xl transition-shadow duration-300">
       <Image
         src={imageSrc}
         alt={title}
@@ -57,12 +57,7 @@ const ProjectCard = ({
         style={hoverStyle}
         className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out flex flex-col justify-center items-center p-4"
       >
-        <h3
-          className="text-white text-lg font-bold mb-2"
-          style={{ textShadow: "0 2px 8px rgba(0,0,0,0.9)" }}
-        >
-          {title}
-        </h3>
+        <h3 className="text-gray-50 text-lg font-bold mb-2">{title}</h3>
         <div className="flex space-x-4">
           {githubUrl && (
             <a

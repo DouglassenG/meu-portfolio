@@ -10,6 +10,7 @@ import {
   Layers,
 } from "lucide-react";
 import { TypingText } from "@/components/ui/TypingText";
+import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
@@ -48,6 +49,18 @@ const Hero = () => {
                 e interfaces intuitivas que impulsionam o sucesso do seu
                 projeto.
               </p>
+              <div className="flex gap-4 justify-center md:justify-start">
+                <a href="https://github.com/DouglassenG/" target="_blank" rel="noopener noreferrer">
+                  <Button className="btn-github">
+                    <Github className="mr-2 h-4 w-4" /> GITHUB
+                  </Button>
+                </a>
+                <a href="#portfolio">
+                  <Button className="btn-projetos">
+                    MEUS PROJETOS
+                  </Button>
+                </a>
+              </div>
             </div>
           </div>
 
