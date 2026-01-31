@@ -18,7 +18,7 @@ const Navbar = () => {
 
   const menuItems = [
     { label: "Sobre", href: "/" },
-    { label: "Portfólio", href: "/portfolio" },
+    { label: "Projetos", href: "/projetos" },
   ];
 
   return (

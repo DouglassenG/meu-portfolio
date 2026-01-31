@@ -1,12 +1,12 @@
 import Navbar from "@/components/layout/Navbar";
-import Hero from "@/components/sections/Hero";
 import Footer from "@/components/layout/Footer";
+import Projetos from "@/components/sections/Projetos";
 
-export default function Home() {
+export default function ProjetosPage() {
   return (
     <main className="min-h-screen">
       <Navbar />
-      <Hero />
+      <Projetos />
       <Footer />
     </main>
   );

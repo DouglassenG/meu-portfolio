@@ -3,7 +3,7 @@ import ProjectCard from "../ui/ProjectCard";
 const projects = [
   {
     id: 1,
-    src: "/portfolio/astrologia_do_norte.png",
+    src: "/projetos/astrologia_do_norte.png",
     title: "Astrologia do Norte",
     githubUrl: "#",
     siteUrl: "#",
@@ -11,7 +11,7 @@ const projects = [
   },
   {
     id: 6,
-    src: "/portfolio/kr_studio.jpg",
+    src: "/projetos/kr_studio.jpg",
     title: "KR Studio",
     githubUrl: "https://github.com/DouglassenG/kr_studio",
     siteUrl: "https://github.com/DouglassenG/kr_studio",
@@ -19,7 +19,7 @@ const projects = [
   },
   {
     id: 11,
-    src: "/portfolio/universo_hamburguer.png",
+    src: "/projetos/universo_hamburguer.png",
     title: "Universo Hamburguer",
     githubUrl: "#",
     siteUrl: "#",
@@ -27,7 +27,7 @@ const projects = [
   },
   {
     id: 3,
-    src: "/portfolio/clone_disney+.png",
+    src: "/projetos/clone_disney+.png",
     title: "Clone Disney+",
     githubUrl: "#",
     siteUrl: "#",
@@ -35,7 +35,7 @@ const projects = [
   },
   {
     id: 7,
-    src: "/portfolio/minhas_tarefas.png",
+    src: "/projetos/minhas_tarefas.png",
     title: "Minhas Tarefas",
     githubUrl: "#",
     siteUrl: "#",
@@ -43,7 +43,7 @@ const projects = [
   },
   {
     id: 5,
-    src: "/portfolio/github_api.png",
+    src: "/projetos/github_api.png",
     title: "Github API",
     githubUrl: "#",
     siteUrl: "#",
@@ -51,7 +51,7 @@ const projects = [
   },
   {
     id: 2,
-    src: "/portfolio/calculadora_imc.png",
+    src: "/projetos/calculadora_imc.png",
     title: "Calculadora IMC",
     githubUrl: "#",
     siteUrl: "#",
@@ -59,7 +59,7 @@ const projects = [
   },
   {
     id: 8,
-    src: "/portfolio/projeto_2.png",
+    src: "/projetos/projeto_2.png",
     title: "Projeto 2",
     githubUrl: "#",
     siteUrl: "#",
@@ -67,7 +67,7 @@ const projects = [
   },
   {
     id: 9,
-    src: "/portfolio/sorteador.png",
+    src: "/projetos/sorteador.png",
     title: "Sorteador",
     githubUrl: "#",
     siteUrl: "#",
@@ -75,7 +75,7 @@ const projects = [
   },
   {
     id: 10,
-    src: "/portfolio/todo_vue.png",
+    src: "/projetos/todo_vue.png",
     title: "Todo Vue",
     githubUrl: "#",
     siteUrl: "#",
@@ -83,7 +83,7 @@ const projects = [
   },
   {
     id: 4,
-    src: "/portfolio/efood.png",
+    src: "/projetos/efood.png",
     title: "Efood",
     githubUrl: "#",
     siteUrl: "#",
@@ -91,12 +91,12 @@ const projects = [
   },
 ];
 
-const Portfolio = () => {
+const Projetos = () => {
   return (
     <section className="py-20 px-4 md:px-20 flex flex-col items-center">
       <div className="mb-12 text-center">
         <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white">
-          Portfólio
+          Projetos
         </h2>
         <p className="text-muted-foreground mt-2">
           Confira alguns dos meus projetos.
@@ -119,4 +119,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Projetos;

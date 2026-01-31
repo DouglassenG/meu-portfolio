@@ -55,7 +55,7 @@ const Hero = () => {
                     <Github className="mr-2 h-4 w-4" /> GITHUB
                   </Button>
                 </a>
-                <a href="#portfolio">
+                <a href="/projetos">
                   <Button className="btn-projetos">
                     MEUS PROJETOS
                   </Button>
