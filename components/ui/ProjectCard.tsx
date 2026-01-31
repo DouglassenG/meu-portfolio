@@ -13,7 +13,6 @@ interface ProjectCardProps {
 // Helper function to darken a hex color
 function darkenHexColor(hex: string, factor: number = 0.8): string {
   if (!hex || hex.length !== 7 || hex[0] !== "#") {
-    // Handle invalid hex codes, return original or a default dark color
     return "#000000";
   }
 
@@ -25,11 +24,11 @@ function darkenHexColor(hex: string, factor: number = 0.8): string {
   g = Math.floor(g * factor);
   b = Math.floor(b * factor);
 
-  r = Math.min(255, Math.max(0, r)).toString(16).padStart(2, "0");
-  g = Math.min(255, Math.max(0, g)).toString(16).padStart(2, "0");
-  b = Math.min(255, Math.max(0, b)).toString(16).padStart(2, "0");
+  const rHex = Math.min(255, Math.max(0, r)).toString(16).padStart(2, "0");
+  const gHex = Math.min(255, Math.max(0, g)).toString(16).padStart(2, "0");
+  const bHex = Math.min(255, Math.max(0, b)).toString(16).padStart(2, "0");
 
-  return `#${r}${g}${b}`;
+  return `#${rHex}${gHex}${bHex}`;
 }
 
 const ProjectCard = ({
