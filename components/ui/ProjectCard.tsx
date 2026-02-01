@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import { Button } from "./button";
 import { Github } from "lucide-react";
+import { useState, useEffect } from "react";
 
 interface ProjectCardProps {
   imageSrc: string;
@@ -38,13 +41,37 @@ const ProjectCard = ({
   siteUrl,
   hoverColor = "#0000ff",
 }: ProjectCardProps) => {
+  const [isHovered, setIsHovered] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 768);
+    };
+
+    handleResize(); // Set initial value
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const darkenedHoverColor = darkenHexColor(hoverColor);
   const hoverStyle = {
     background: `linear-gradient(to top, ${darkenedHoverColor}BB, transparent)`,
   };
 
+  const cardStyle = {
+    borderColor: isHovered && isDesktop ? hoverColor : "transparent",
+    boxShadow: isHovered && isDesktop ? `0 0 20px ${hoverColor}99` : 'none',
+    transition: 'border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out'
+  };
+
   return (
-    <div className="rounded-lg overflow-hidden group relative shadow-md hover:shadow-xl transition-shadow duration-300">
+    <div
+      className="rounded-lg overflow-hidden group relative shadow-md hover:shadow-xl transition-shadow duration-300 border-2 border-transparent"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      style={cardStyle}
+    >
       <Image
         src={imageSrc}
         alt={title}
@@ -69,8 +96,9 @@ const ProjectCard = ({
                 variant="outline"
                 size="icon"
                 className="opacity-70 group-hover:opacity-100 transition-opacity duration-300 ease-in-out cursor-pointer"
+                style={{ cursor: "pointer" }}
               >
-                <Github className="h-4 w-4" />
+                <Github className="h-4 w-4 cursor-pointer" />
               </Button>
             </a>
           )}
@@ -84,6 +112,7 @@ const ProjectCard = ({
               <Button
                 variant="secondary"
                 className="opacity-70 group-hover:opacity-100 transition-opacity duration-300 ease-in-out cursor-pointer"
+                style={{ cursor: "pointer" }}
               >
                 Visite o projeto
               </Button>

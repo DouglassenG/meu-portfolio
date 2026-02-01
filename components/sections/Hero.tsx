@@ -50,45 +50,19 @@ const Hero = () => {
                 projeto.
               </p>
               <div className="flex gap-4 justify-center md:justify-start">
-                <a href="https://github.com/DouglassenG/" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://github.com/DouglassenG/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Button className="btn-github">
                     <Github className="mr-2 h-4 w-4" /> GITHUB
                   </Button>
                 </a>
                 <a href="/projetos">
-                  <Button className="btn-projetos">
-                    MEUS PROJETOS
-                  </Button>
+                  <Button className="btn-projetos">MEUS PROJETOS</Button>
                 </a>
               </div>
-            </div>
-          </div>
-
-          <div className="pt-8 flex flex-col gap-10 items-center md:items-start w-full">
-            {/* Icons centered and slightly larger - Hidden on Desktop as they are in Navbar */}
-            <div className="flex items-center justify-center md:hidden gap-8 md:gap-6 w-full">
-              <a
-                href="https://github.com/DouglassenG/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-[var(--accent)] transition-colors hover:scale-110 duration-300 text-white md:text-[var(--foreground)]"
-              >
-                <Github size={24} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/douglas-michelini/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-[var(--accent)] transition-colors hover:scale-110 duration-300 text-white md:text-[var(--foreground)]"
-              >
-                <Linkedin size={24} />
-              </a>
-              <a
-                href="mailto:contatodmichelini97@gmail.com"
-                className="hover:text-[var(--accent)] transition-colors hover:scale-110 duration-300 text-white md:text-[var(--foreground)]"
-              >
-                <Mail size={24} />
-              </a>
             </div>
           </div>
         </div>

@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 flex justify-between items-center py-6 px-4 md:px-40 md:bg-black/40 md:backdrop-blur-md md:border-b md:border-white/5">
+      <nav className="sticky top-0 z-50 flex justify-between items-center py-6 px-4 md:px-40 bg-black/40 backdrop-blur-sm shadow-lg">
         {/* Brand */}
         <div
           className="flex items-center"
