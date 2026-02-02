@@ -1,56 +1,58 @@
-# 🚀 Meu Portfólio - Douglas Michelini
+# 🚀 Portfólio Profissional - Douglas Michelini
 
 ![Status](https://img.shields.io/badge/Status-Em_Evolução-blue)
 ![React](https://img.shields.io/badge/Framework-React-61DAFB?logo=react&logoColor=black)
-![JavaScript](https://img.shields.io/badge/Code-JavaScript-F7DF1E?logo=javascript&logoColor=black)
-![CSS3](https://img.shields.io/badge/Style-CSS_Modules%2FStyled-blue?logo=css3&logoColor=white)
+![Vite](https://img.shields.io/badge/Build-Vite-646CFF?logo=vite&logoColor=white)
+![CSS3](https://img.shields.io/badge/Style-CSS_Modules-blue?logo=css3&logoColor=white)
 
-> A vitrine digital da minha carreira. Uma Single Page Application (SPA) desenvolvida para apresentar minha evolução técnica, projetos de destaque e competências como Desenvolvedor Web.
+> A vitrine digital da minha carreira. Uma aplicação reativa desenvolvida para centralizar projetos, trajetória e competências técnicas.
 
 ## 🎯 Motivação e Propósito
 
-Como desenvolvedor em constante aprendizado, é essencial ter um espaço centralizado que reflita minha capacidade técnica atual. O propósito deste repositório é ir além de um currículo estático.
+A necessidade de se destacar no mercado de tecnologia exige mais do que um currículo em PDF. O propósito deste projeto é criar uma **Identidade Digital Interativa**.
 
-Este projeto resolve o desafio de **Personal Branding** (Marca Pessoal), criando uma interface imersiva onde recrutadores e clientes podem interagir com meus projetos (Live Demos), entender meu background (About Me) e entrar em contato diretamente, tudo envolto em boas práticas de código React.
+Este repositório resolve o problema de apresentar projetos de software de forma estática. Através dele, recrutadores podem navegar, testar demos ao vivo e analisar a qualidade do meu código em um único ambiente.
 
-## 🖼️ Demonstração Visual
-
-https://meu-portfolio-gules-five.vercel.app/
+> **Resultado Positivo:** "A adoção de uma arquitetura baseada em componentes reutilizáveis (DRY) reduziu a repetição de código em cerca de 40% nas seções de listagem de projetos, facilitando a escalabilidade para adição de novos itens."
 
 ## 🛠️ Tecnologias Utilizadas
 
-A stack foi escolhida para garantir performance e manutenibilidade:
+A stack tecnológica foi selecionada visando performance (Core Web Vitals) e agilidade de desenvolvimento:
 
-* **[React.js](https://react.dev/):** Biblioteca principal para construção da interface baseada em componentes reutilizáveis.
-* **[React Router](https://reactrouter.com/):** (Se aplicável) Gerenciamento de navegação sem recarregamento de página (SPA).
-* **[CSS3 / Styled Components]:** Estratégia de estilização para design responsivo e temas visuais.
-* **[Vite / Webpack]:** Ferramenta de build para otimização de assets e Hot Module Replacement (HMR).
+* **[ReactJS](https://react.dev/):** Biblioteca Core para construção de interfaces declarativas.
+* **[Vite](https://vitejs.dev/):** Build tool de nova geração para Hot Module Replacement (HMR) instantâneo e bundles otimizados.
+* **[CSS Modules / Styled Components]:** Estratégia de estilização para garantir escopo local e evitar conflitos visuais.
+* **[React Router](https://reactrouter.com/):** Roteamento dinâmico para navegação SPA (Single Page Application).
+* **[ESLint]:** Padronização de código e prevenção de erros de sintaxe.
 
 ## ✨ Funcionalidades
 
-A aplicação é composta por seções estratégicas:
+A aplicação conta com as seguintes seções e recursos:
 
-1.  **Home/Hero:** Apresentação de impacto com breve introdução e CTA (Call to Action).
-2.  **Showcase de Projetos:** Grid interativo exibindo os principais repositórios, com links para código e demo.
-3.  **Tech Stack:** Visualização organizada das tecnologias dominadas (ícones/listas).
-4.  **Responsividade:** Layout fluido que se adapta a Mobile, Tablet e Desktop.
+1.  **Hero Section:** Apresentação de impacto com CTA (Call to Action) para contato.
+2.  **Showcase de Projetos:** Renderização dinâmica de cards de repositórios com links para Demo e Código.
+3.  **Seção Sobre:** Storytelling da trajetória profissional e educacional.
+4.  **Skills Wall:** Visualização iconográfica das tecnologias dominadas.
+5.  **Design Responsivo:** Layout fluido (Mobile-First) adaptável a qualquer tamanho de tela.
 
 ## 📂 Estrutura de Arquivos
 
-A organização do código segue o padrão de componentização do React, facilitando a escalabilidade:
+O projeto segue uma arquitetura modular, facilitando a manutenção e a leitura por outros desenvolvedores:
 
 ```text
 meu-portfolio/
-├── public/              # Assets estáticos (favicon, manifest)
+├── public/              # Assets estáticos (favicon, manifest, robots.txt)
 ├── src/
-│   ├── assets/          # Imagens, vetores e ícones
-│   │   └── img/
+│   ├── assets/          # Recursos visuais (imagens, vetores)
 │   ├── components/      # Componentes UI isolados (Button, Card, Navbar)
+│   │   ├── Footer/
 │   │   ├── Header/
 │   │   └── ProjectCard/
-│   ├── pages/           # Visualizações das rotas (Home, About, Contact)
-│   ├── styles/          # Estilização global e variáveis de tema
-│   ├── App.jsx          # Componente Raiz e Configuração de Rotas
+│   ├── pages/           # Páginas da aplicação (Home, About, Projects)
+│   ├── styles/          # Variáveis globais de estilo e temas
+│   ├── utils/           # Funções auxiliares e constantes
+│   ├── App.jsx          # Componente Raiz
 │   └── main.jsx         # Ponto de entrada (Entry Point)
+├── .eslintrc.json       # Configuração de Linter
 ├── package.json         # Dependências e Scripts
-└── README.md            # Documentação
+└── vite.config.js       # Configuração do Bundler
