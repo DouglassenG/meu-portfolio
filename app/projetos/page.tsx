@@ -4,7 +4,7 @@ import Projetos from "@/components/sections/Projetos";
 
 export default function ProjetosPage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen" style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
       <Navbar />
       <Projetos />
       <Footer />
