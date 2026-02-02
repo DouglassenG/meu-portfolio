@@ -150,3 +150,28 @@
 button {
   cursor: pointer !important;
 }
+
+/* Estilos para os botões do ProjectCard */
+.card-btn-github {
+  background-color: oklch(0.922 0 0); /* Cor clara para visibilidade */
+  color: oklch(0.205 0 0); /* Cor escura para o texto */
+  border: 1px solid oklch(0.205 0 0 / 20%);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.card-btn-github:hover {
+  background-color: oklch(0.205 0 0); /* Inverte no hover */
+  color: oklch(0.922 0 0);
+}
+
+.card-btn-site {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+  border: 1px solid transparent;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.card-btn-site:hover {
+  background-color: oklch(0.65 0.12 180); /* Tom mais escuro do accent */
+  border-color: var(--accent-foreground);
+}

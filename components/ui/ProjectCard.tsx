@@ -61,64 +61,64 @@ const ProjectCard = ({
 
   const cardStyle = {
     borderColor: isHovered && isDesktop ? hoverColor : "transparent",
-    boxShadow: isHovered && isDesktop ? `0 0 20px ${hoverColor}99` : 'none',
-    transition: 'border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out'
+    boxShadow:
+      isHovered && isDesktop ? `0 0 20px ${hoverColor}99` : "none",
+    transition: "border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out",
   };
 
   return (
-    <div
-      className="rounded-lg overflow-hidden group relative shadow-md hover:shadow-xl transition-shadow duration-300 border-2 border-transparent"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      style={cardStyle}
-    >
-      <Image
-        src={imageSrc}
-        alt={title}
-        width={400}
-        height={400}
-        className="object-cover w-full h-full transition-transform duration-300 ease-in-out group-hover:scale-105"
-      />
+    <div className="flex flex-col">
       <div
-        style={hoverStyle}
-        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out flex flex-col justify-center items-center p-4"
+        className="rounded-lg overflow-hidden group relative shadow-md hover:shadow-xl transition-shadow duration-300 border-2 border-transparent"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        style={cardStyle}
       >
-        <h3 className="text-gray-50 text-lg font-bold mb-2">{title}</h3>
-        <div className="flex space-x-4">
-          {githubUrl && (
-            <a
-              href={githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cursor-pointer"
-            >
-              <Button
-                variant="outline"
-                size="icon"
-                className="opacity-70 group-hover:opacity-100 transition-opacity duration-300 ease-in-out cursor-pointer"
-                style={{ cursor: "pointer" }}
-              >
-                <Github className="h-4 w-4 cursor-pointer" />
-              </Button>
-            </a>
-          )}
-          {siteUrl && (
-            <a
-              href={siteUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cursor-pointer"
-            >
-              <Button
-                variant="secondary"
-                className="opacity-70 group-hover:opacity-100 transition-opacity duration-300 ease-in-out cursor-pointer"
-                style={{ cursor: "pointer" }}
-              >
-                Visite o projeto
-              </Button>
-            </a>
-          )}
+        <Image
+          src={imageSrc}
+          alt={title}
+          width={400}
+          height={400}
+          className="object-cover w-full h-full transition-transform duration-300 ease-in-out group-hover:scale-105"
+        />
+        <div
+          style={hoverStyle}
+          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out flex flex-col justify-center items-center p-4"
+        >
+          <h3 className="text-gray-50 text-lg font-bold mb-2">{title}</h3>
         </div>
+      </div>
+      <div className="flex justify-center space-x-4 mt-4">
+        {githubUrl && (
+          <a
+            href={githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button
+              variant="outline"
+              size="sm"
+              className="card-btn-github"
+            >
+              <Github className="mr-2 h-4 w-4" /> GITHUB
+            </Button>
+          </a>
+        )}
+        {siteUrl && (
+          <a
+            href={siteUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button
+              variant="secondary"
+              size="sm"
+              className="card-btn-site"
+            >
+              Visite o projeto
+            </Button>
+          </a>
+        )}
       </div>
     </div>
   );
