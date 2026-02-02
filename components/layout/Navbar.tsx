@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import React, { useState } from "react";
+import { theme } from "@/src/styles";
 import { Menu, X, Github, Linkedin, Mail } from "lucide-react";
 
 const Navbar = () => {
@@ -17,15 +17,16 @@ const Navbar = () => {
     <>
       <nav className="sticky top-0 z-50 flex justify-between items-center py-6 px-4 md:px-40 bg-black/40 backdrop-blur-sm shadow-lg">
         {/* Brand */}
-        <Link href="/" className="flex items-center">
-          <Image
+        <div
+          className="flex items-center"
+          style={{ color: theme.colors.foreground }}
+        >
+          <img
             src="/icon.png"
             alt="Ícone"
-            width={28}
-            height={28}
-            className="h-7 w-7 rounded-full object-cover"
+            className="h-7 w-7 rounded-full object-cover "
           />
-        </Link>
+        </div>
 
         {/* Desktop Right Group: Menu + Social */}
         <div className="hidden md:flex items-center gap-8">
@@ -34,7 +35,8 @@ const Navbar = () => {
               <li key={item.label}>
                 <Link
                   href={item.href}
-                  className="relative text-xs uppercase tracking-widest hover:opacity-100 transition-opacity after:content-[''] after:absolute after:w-0 after:h-[2px] after:bottom-[-4px] after:left-0 after:bg-[var(--accent)] hover:after:w-full after:transition-all after:duration-300 text-foreground"
+                  className="relative text-xs uppercase tracking-widest hover:opacity-100 transition-opacity after:content-[''] after:absolute after:w-0 after:h-[2px] after:bottom-[-4px] after:left-0 after:bg-[var(--accent)] hover:after:w-full after:transition-all after:duration-300"
+                  style={{ color: theme.colors.foreground }}
                 >
                   {item.label}
                 </Link>
@@ -47,7 +49,8 @@ const Navbar = () => {
               href="https://github.com/DouglassenG/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[var(--accent)] transition-all ease-in-out hover:scale-110 duration-500 text-foreground"
+              className="hover:text-[var(--accent)] transition-all ease-in-out hover:scale-110 duration-500"
+              style={{ color: theme.colors.foreground }}
             >
               <Github size={20} />
             </a>
@@ -55,13 +58,15 @@ const Navbar = () => {
               href="https://www.linkedin.com/in/douglas-michelini/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[var(--accent)] transition-all ease-in-out hover:scale-110 duration-500 text-foreground"
+              className="hover:text-[var(--accent)] transition-all ease-in-out hover:scale-110 duration-500"
+              style={{ color: theme.colors.foreground }}
             >
               <Linkedin size={20} />
             </a>
             <a
               href="mailto:contatodmichelini97@gmail.com"
-              className="hover:text-[var(--accent)] transition-all ease-in-out hover:scale-110 duration-500 text-foreground"
+              className="hover:text-[var(--accent)] transition-all ease-in-out hover:scale-110 duration-500"
+              style={{ color: theme.colors.foreground }}
             >
               <Mail size={20} />
             </a>
@@ -69,13 +74,15 @@ const Navbar = () => {
               href="https://api.whatsapp.com/send?phone=051996979539"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-green-500 transition-all ease-in-out hover:scale-110 duration-500 text-foreground"
+              className="hover:text-green-500 transition-all ease-in-out hover:scale-110 duration-500"
+              style={{ color: theme.colors.foreground }}
             >
-              <Image
+              <img
                 src="/whatsapp.svg"
                 alt="Whatsapp"
                 width={20}
                 height={20}
+                style={{ filter: "invert(1) brightness(2)" }}
               />
             </a>
           </div>
@@ -121,15 +128,17 @@ const Navbar = () => {
             <X size={28} />
           </button>
           {/* Mobile Brand (Optional, but keeping for structure) */}
-                    <Link href="/" className="flex items-center mb-10">
-                      <Image
-                        src="/icon.png"
-                        alt="Ícone"
-                        width={28}
-                        height={28}
-                        className="h-7 w-7 rounded-full object-cover"
-                      />
-                    </Link>
+          <div
+            className="flex items-center mb-10"
+            style={{ color: theme.colors.foreground }}
+          >
+            <img
+              src="/icon.png"
+              alt="Ícone"
+              className="h-7 w-7 rounded-full object-cover"
+            />
+          </div>
+
           {/* Menu Links */}
           <div className="flex flex-col gap-8 items-center">
             {menuItems.map((item) => (
@@ -137,7 +146,7 @@ const Navbar = () => {
                 key={item.label}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="text-xs uppercase tracking-widest hover:text-[var(--accent)] transition-colors text-foreground"
+                className="text-xs uppercase tracking-widest hover:text-[var(--accent)] transition-colors text-white"
               >
                 {item.label}
               </Link>
@@ -150,7 +159,7 @@ const Navbar = () => {
               href="https://github.com/DouglassenG/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground hover:text-[var(--accent)] transition-all ease-in-out hover:scale-110 duration-500"
+              className="text-white hover:text-[var(--accent)] transition-all ease-in-out hover:scale-110 duration-500"
             >
               <Github size={18} />
             </a>
@@ -158,13 +167,13 @@ const Navbar = () => {
               href="https://www.linkedin.com/in/douglas-michelini/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground hover:text-[var(--accent)] transition-all ease-in-out hover:scale-110 duration-500"
+              className="text-white hover:text-[var(--accent)] transition-all ease-in-out hover:scale-110 duration-500"
             >
               <Linkedin size={18} />
             </a>
             <a
               href="mailto:contatodmichelini97@gmail.com"
-              className="text-foreground hover:text-[var(--accent)] transition-all ease-in-out hover:scale-110 duration-500"
+              className="text-white hover:text-[var(--accent)] transition-all ease-in-out hover:scale-110 duration-500"
             >
               <Mail size={18} />
             </a>
@@ -172,13 +181,14 @@ const Navbar = () => {
               href="https://api.whatsapp.com/send?phone=051996979539"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground hover:text-green-500 transition-all ease-in-out hover:scale-110 duration-500"
+              className="text-white hover:text-green-500 transition-all ease-in-out hover:scale-110 duration-500"
             >
-              <Image
+              <img
                 src="/whatsapp.svg"
                 alt="Whatsapp"
                 width={18}
                 height={18}
+                style={{ filter: "invert(1) brightness(2)" }}
               />
             </a>
           </div>
