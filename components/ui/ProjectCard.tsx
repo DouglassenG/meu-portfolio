@@ -1,120 +1,63 @@
 "use client";
 
-import Image from "next/image";
 import { Button } from "./button";
 import { Github } from "lucide-react";
-import { useState, useEffect } from "react";
 
 interface ProjectCardProps {
   imageSrc: string;
   title: string;
+  objetivo: string;
+  tecnologia: string;
+  resultado: string;
   githubUrl?: string;
   siteUrl?: string;
-  hoverColor?: string;
-}
-
-// Helper function to darken a hex color
-function darkenHexColor(hex: string, factor: number = 0.8): string {
-  if (!hex || hex.length !== 7 || hex[0] !== "#") {
-    return "#000000";
-  }
-
-  let r = parseInt(hex.slice(1, 3), 16);
-  let g = parseInt(hex.slice(3, 5), 16);
-  let b = parseInt(hex.slice(5, 7), 16);
-
-  r = Math.floor(r * factor);
-  g = Math.floor(g * factor);
-  b = Math.floor(b * factor);
-
-  const rHex = Math.min(255, Math.max(0, r)).toString(16).padStart(2, "0");
-  const gHex = Math.min(255, Math.max(0, g)).toString(16).padStart(2, "0");
-  const bHex = Math.min(255, Math.max(0, b)).toString(16).padStart(2, "0");
-
-  return `#${rHex}${gHex}${bHex}`;
 }
 
 const ProjectCard = ({
   imageSrc,
   title,
+  objetivo,
+  tecnologia,
+  resultado,
   githubUrl,
   siteUrl,
-  hoverColor = "#0000ff",
 }: ProjectCardProps) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsDesktop(window.innerWidth >= 768);
-    };
-
-    handleResize(); // Set initial value
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const darkenedHoverColor = darkenHexColor(hoverColor);
-  const hoverStyle = {
-    background: `linear-gradient(to top, ${darkenedHoverColor}BB, transparent)`,
-  };
-
-  const cardStyle = {
-    borderColor: isHovered && isDesktop ? hoverColor : "transparent",
-    boxShadow:
-      isHovered && isDesktop ? `0 0 20px ${hoverColor}99` : "none",
-    transition: "border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out",
-  };
-
   return (
-    <div className="flex flex-col">
-      <div
-        className="rounded-lg overflow-hidden group relative shadow-md hover:shadow-xl transition-shadow duration-300 border-2 border-transparent"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        style={cardStyle}
-      >
-        <Image
+    <div className="flex flex-col rounded-lg overflow-hidden shadow-md border-2 border-transparent bg-card text-card-foreground p-4 sm:p-6">
+      <h3 className="text-lg sm:text-xl font-bold mb-4 text-center">{title}</h3>
+      <div className="relative w-full h-48 sm:h-64 mb-4">
+        <img
           src={imageSrc}
           alt={title}
-          width={400}
-          height={400}
-          className="object-cover w-full h-full transition-transform duration-300 ease-in-out group-hover:scale-105"
+          className="object-cover w-full h-full rounded-md"
         />
-        <div
-          style={hoverStyle}
-          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out flex flex-col justify-center items-center p-4"
-        >
-          <h3 className="text-gray-50 text-lg font-bold mb-2">{title}</h3>
-        </div>
       </div>
-      <div className="flex justify-center space-x-4 mt-4">
+      <div className="flex-grow">
+        <h4 className="font-semibold mt-4 text-base sm:text-lg">
+          Objetivo do Projeto
+        </h4>
+        <p className="text-sm text-muted-foreground mb-4">{objetivo}</p>
+
+        <h4 className="font-semibold text-base sm:text-lg">
+          Tecnologia Utilizada
+        </h4>
+        <p className="text-sm text-muted-foreground mb-4">{tecnologia}</p>
+
+        <h4 className="font-semibold text-base sm:text-lg">Resultado</h4>
+        <p className="text-sm text-muted-foreground mb-4">{resultado}</p>
+      </div>
+
+      <div className="flex justify-center space-x-4 mt-auto">
         {githubUrl && (
-          <a
-            href={githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button
-              variant="outline"
-              size="sm"
-              className="card-btn-github"
-            >
+          <a href={githubUrl} target="_blank" rel="noopener noreferrer">
+            <Button variant="outline" size="sm" className="card-btn-github">
               <Github className="mr-2 h-4 w-4" /> GITHUB
             </Button>
           </a>
         )}
         {siteUrl && (
-          <a
-            href={siteUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button
-              variant="secondary"
-              size="sm"
-              className="card-btn-site"
-            >
+          <a href={siteUrl} target="_blank" rel="noopener noreferrer">
+            <Button variant="secondary" size="sm" className="card-btn-site">
               Visite o projeto
             </Button>
           </a>
