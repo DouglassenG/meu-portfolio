@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Button } from "./button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import ProjectCard from "./ProjectCard";
 
 interface Project {
   id: number;
@@ -130,10 +131,14 @@ const Carousel = () => {
         >
           {projects.map((project) => (
             <div className="w-full flex-shrink-0" key={project.id}>
-              <img
-                src={project.src}
-                alt={project.title}
-                className="object-cover w-full h-full rounded-md"
+              <ProjectCard
+                imageSrc={project.src}
+                title={project.title}
+                objetivo={project.objetivo}
+                tecnologia={project.tecnologia}
+                resultado={project.resultado}
+                githubUrl={project.githubUrl}
+                siteUrl={project.siteUrl}
               />
             </div>
           ))}
