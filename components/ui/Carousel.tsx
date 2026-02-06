@@ -144,7 +144,7 @@ const Carousel = () => {
           ))}
         </div>
       </div>
-      <div className="flex justify-center mt-4 sm:mt-0 sm:absolute sm:top-1/2 sm:w-full sm:justify-between">
+      <div className="flex justify-center mt-4 sm:hidden">
         <Button
           onClick={goToPrevious}
           className="sm:absolute sm:left-0 sm:transform sm:-translate-x-1/2 sm:-translate-y-1/2 bg-transparent hover:bg-transparent text-white"
@@ -162,6 +162,23 @@ const Carousel = () => {
           <ChevronRight className="h-8 w-8" />
         </Button>
       </div>
+      {/* New absolute buttons for desktop/tablet, hidden on mobile */}
+      <Button
+        onClick={goToPrevious}
+        className="hidden sm:block absolute left-[-3rem] top-1/2 -translate-y-1/2 transform bg-transparent hover:bg-transparent text-white z-10"
+        variant="outline"
+        size="icon-lg"
+      >
+        <ChevronLeft className="h-8 w-8" />
+      </Button>
+      <Button
+        onClick={goToNext}
+        className="hidden sm:block absolute right-[-3rem] top-1/2 -translate-y-1/2 transform bg-transparent hover:bg-transparent text-white z-10"
+        variant="outline"
+        size="icon-lg"
+      >
+        <ChevronRight className="h-8 w-8" />
+      </Button>
     </div>
   );
 };
