@@ -9,7 +9,12 @@ interface TypingTextProps {
   delay?: number;
 }
 
-export const TypingText = ({ text, speed = 100, className, delay = 0 }: TypingTextProps) => {
+export const TypingText = ({
+  text,
+  speed = 100,
+  className,
+  delay = 0,
+}: TypingTextProps) => {
   const [displayedText, setDisplayedText] = useState("");
   const [started, setStarted] = useState(false);
 
@@ -28,6 +33,7 @@ export const TypingText = ({ text, speed = 100, className, delay = 0 }: TypingTe
     setDisplayedText("");
     const timer = setInterval(() => {
       if (i < text.length) {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         setDisplayedText((prev) => text.slice(0, i + 1));
         i++;
       } else {
