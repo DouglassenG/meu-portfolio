@@ -18,7 +18,7 @@ interface Project {
 
 const projects: Project[] = [
   {
-    id: 1,
+    id: 2,
     src: "/projetos/astrologia_do_norte.png",
     title: "Astrologia do Norte",
     objetivo: "Placeholder para objetivo",
@@ -26,7 +26,7 @@ const projects: Project[] = [
     resultado: "Placeholder para resultado",
   },
   {
-    id: 2,
+    id: 5,
     src: "/projetos/calculadora_imc.png",
     title: "Calculadora IMC",
     objetivo: "Placeholder para objetivo",
@@ -50,7 +50,7 @@ const projects: Project[] = [
     resultado: "Placeholder para resultado",
   },
   {
-    id: 5,
+    id: 6,
     src: "/projetos/github_api.png",
     title: "Github API",
     objetivo: "Placeholder para objetivo",
@@ -58,7 +58,7 @@ const projects: Project[] = [
     resultado: "Placeholder para resultado",
   },
   {
-    id: 6,
+    id: 1,
     src: "/projetos/kr_studio.jpg",
     title: "KR Studio",
     objetivo: "Placeholder para objetivo",
