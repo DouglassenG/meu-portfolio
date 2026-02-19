@@ -25,7 +25,8 @@ const projects: Project[] = [
       "É um projeto de interface web focado em criar uma experiência visual elegante e performática para usuários interessados em astrologia. O projeto utiliza a arquitetura moderna do Next.js (App Router) para garantir SEO otimizado e carregamento rápido, combinado com componentes visuais sofisticados. ",
     tecnologia:
       "Next.js (App Router), React, Tailwind CSS, Framer Motion, TypeScript",
-    resultado: "",
+    resultado:
+      "A utilização da ferramenta Vite como bundler, aliada ao Code Splitting (divisão de código) do React, otimizou o empacotamento dos assets e deixou o carregamento 3x mais rápido ao abrir a página inicial e a galeria de signos da aplicação, comparado a setups tradicionais.",
   },
   {
     id: 5,
