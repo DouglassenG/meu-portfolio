@@ -23,6 +23,9 @@ const projects: Project[] = [
     title: "Astrologia do Norte",
     objetivo:
       "É um projeto de interface web focado em criar uma experiência visual elegante e performática para usuários interessados em astrologia. O projeto utiliza a arquitetura moderna do Next.js (App Router) para garantir SEO otimizado e carregamento rápido, combinado com componentes visuais sofisticados. ",
+    tecnologia:
+      "Next.js (App Router), React, Tailwind CSS, Framer Motion, TypeScript",
+    resultado: "",
   },
   {
     id: 5,
