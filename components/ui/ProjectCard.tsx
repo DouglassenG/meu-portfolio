@@ -82,4 +82,4 @@ const ProjectCard = ({
 
 export default ProjectCard;
 
-// Exemplo de uso fsdlfjaslkdjflkasj
+// Exemplo de uso
