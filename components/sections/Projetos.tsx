@@ -135,22 +135,21 @@ const projects = [
 const Projetos = () => {
   return (
     <section className="relative py-24 px-4 sm:px-8 md:px-16 lg:px-24 flex flex-col items-center overflow-hidden">
-      {/* Background decoration to match modern UI */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-[120px] opacity-50" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px] opacity-50" />
+      {/* Refined Background decoration - Neutral and balanced */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 pointer-events-none">
+        <div className="absolute top-[-10%] left-[10%] w-[500px] h-[500px] bg-accent/5 rounded-full blur-[140px] opacity-40 animate-pulse" />
+        <div className="absolute bottom-[-10%] right-[10%] w-[500px] h-[500px] bg-primary/5 rounded-full blur-[140px] opacity-30" />
       </div>
 
-            <div className="mb-16 text-center space-y-4 max-w-2xl">
-              <h2 className="text-4xl md:text-6xl font-black tracking-tighter text-foreground uppercase italic">
-                Projetos <span className="text-[var(--accent)] opacity-90">Selecionados</span>
-              </h2>
-              <div className="h-1.5 w-24 bg-accent/80 mx-auto rounded-full" />
-              <p className="text-lg text-foreground/60 font-medium leading-relaxed">
-                Uma vitrine de soluções digitais que unem design impactante e tecnologia de ponta.
-              </p>
-            </div>
-
+      <div className="mb-16 text-center space-y-4 max-w-2xl">
+        <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-foreground uppercase drop-shadow-sm">
+          Projetos <span className="text-[var(--accent)] opacity-80">Selecionados</span>
+        </h2>
+        <div className="h-1 w-20 bg-accent/40 mx-auto rounded-full" />
+        <p className="text-lg text-foreground/50 font-medium leading-relaxed max-w-lg mx-auto italic">
+          Uma vitrine de soluções digitais que unem design impactante e tecnologia de ponta.
+        </p>
+      </div>
       <div className="w-full max-w-[1200px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
         {projects.map((project) => (
           <ProjectCard
