@@ -40,22 +40,15 @@ const ProjectCard = ({
         {/* Quadrant 2 & 4 (Right Column - Top/Bottom): Objective and Result */}
         <div className="col-start-2 row-span-2 flex flex-col justify-between">
           <div>
-            <h4 className="font-semibold text-base sm:text-lg">
-              Objetivo do Projeto
-            </h4>
             <p className="text-sm text-muted-foreground mb-4">{objetivo}</p>
           </div>
           <div>
-            <h4 className="font-semibold text-base sm:text-lg">Resultado</h4>
             <p className="text-sm text-muted-foreground">{resultado}</p>
           </div>
         </div>
 
         {/* Quadrant 3 (Bottom-Left): Technologies */}
         <div className="col-start-1 row-start-2 flex flex-col justify-end">
-          <h4 className="font-semibold text-base sm:text-lg">
-            Tecnologia Utilizada
-          </h4>
           <p className="text-sm text-muted-foreground">{tecnologia}</p>
         </div>
       </div>
