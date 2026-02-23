@@ -11,6 +11,8 @@ const projects = [
       "Next.js (App Router), React, Tailwind CSS, Framer Motion, TypeScript",
     resultado:
       "A utilização da ferramenta Vite como bundler, aliada ao Code Splitting (divisão de código) do React, otimizou o empacotamento dos assets e deixou o carregamento 3x mais rápido ao abrir a página inicial e a galeria de signos da aplicação, comparado a setups tradicionais.",
+    githubUrl: "",
+    siteUrl: "",
   },
   {
     id: 5,
@@ -19,6 +21,8 @@ const projects = [
     objetivo: "Placeholder para objetivo",
     tecnologia: "Placeholder para tecnologia",
     resultado: "Placeholder para resultado",
+    githubUrl: "",
+    siteUrl: "",
   },
   {
     id: 3,
@@ -27,6 +31,8 @@ const projects = [
     objetivo: "Placeholder para objetivo",
     tecnologia: "Placeholder para tecnologia",
     resultado: "Placeholder para resultado",
+    githubUrl: "",
+    siteUrl: "",
   },
   {
     id: 4,
@@ -35,6 +41,8 @@ const projects = [
     objetivo: "Placeholder para objetivo",
     tecnologia: "Placeholder para tecnologia",
     resultado: "Placeholder para resultado",
+    githubUrl: "",
+    siteUrl: "",
   },
   {
     id: 6,
@@ -43,6 +51,8 @@ const projects = [
     objetivo: "Placeholder para objetivo",
     tecnologia: "Placeholder para tecnologia",
     resultado: "Placeholder para resultado",
+    githubUrl: "",
+    siteUrl: "",
   },
   {
     id: 1,
@@ -51,6 +61,8 @@ const projects = [
     objetivo: "Placeholder para objetivo",
     tecnologia: "Placeholder para tecnologia",
     resultado: "Placeholder para resultado",
+    githubUrl: "",
+    siteUrl: "",
   },
   {
     id: 7,
@@ -59,6 +71,8 @@ const projects = [
     objetivo: "Placeholder para objetivo",
     tecnologia: "Placeholder para tecnologia",
     resultado: "Placeholder para resultado",
+    githubUrl: "",
+    siteUrl: "",
   },
   {
     id: 8,
@@ -67,6 +81,8 @@ const projects = [
     objetivo: "Placeholder para objetivo",
     tecnologia: "Placeholder para tecnologia",
     resultado: "Placeholder para resultado",
+    githubUrl: "",
+    siteUrl: "",
   },
   {
     id: 9,
@@ -75,6 +91,8 @@ const projects = [
     objetivo: "Placeholder para objetivo",
     tecnologia: "Placeholder para tecnologia",
     resultado: "Placeholder para resultado",
+    githubUrl: "",
+    siteUrl: "",
   },
   {
     id: 10,
@@ -83,6 +101,8 @@ const projects = [
     objetivo: "Placeholder para objetivo",
     tecnologia: "Placeholder para tecnologia",
     resultado: "Placeholder para resultado",
+    githubUrl: "",
+    siteUrl: "",
   },
   {
     id: 11,
