@@ -18,9 +18,11 @@ const projects = [
     id: 5,
     src: "/projetos/calculadora_imc.png",
     title: "Calculadora IMC",
-    objetivo: "Ferramenta de saúde para cálculo rápido de Índice de Massa Corporal com feedback visual instantâneo.",
+    objetivo:
+      "Ferramenta de saúde para cálculo rápido de Índice de Massa Corporal com feedback visual instantâneo.",
     tecnologia: "React, JavaScript, CSS Modules, Responsive Design",
-    resultado: "Interface intuitiva que guia o usuário através dos parâmetros de saúde de forma clara e objetiva.",
+    resultado:
+      "Interface intuitiva que guia o usuário através dos parâmetros de saúde de forma clara e objetiva.",
     githubUrl: "https://github.com/DouglassenG/",
     siteUrl: "#",
     accentColor: "#10B981", // Emerald
@@ -29,9 +31,11 @@ const projects = [
     id: 3,
     src: "/projetos/clone_disney+.png",
     title: "Clone Disney+",
-    objetivo: "Recriação da interface do Disney+ para estudo de layouts complexos e consumo de APIs de streaming.",
+    objetivo:
+      "Recriação da interface do Disney+ para estudo de layouts complexos e consumo de APIs de streaming.",
     tecnologia: "React, Styled Components, Firebase, TMDB API",
-    resultado: "Fidelidade visual de 95% em relação à plataforma original, com navegação fluida entre categorias.",
+    resultado:
+      "Fidelidade visual de 95% em relação à plataforma original, com navegação fluida entre categorias.",
     githubUrl: "https://github.com/DouglassenG/",
     siteUrl: "#",
     accentColor: "#1E40AF", // Blue
@@ -40,9 +44,11 @@ const projects = [
     id: 4,
     src: "/projetos/efood.png",
     title: "Efood",
-    objetivo: "Plataforma de delivery completa, desde a seleção de restaurantes até o checkout seguro.",
+    objetivo:
+      "Plataforma de delivery completa, desde a seleção de restaurantes até o checkout seguro.",
     tecnologia: "React, Redux, TypeScript, Styled Components",
-    resultado: "Fluxo de compra otimizado resultando em uma experiência de usuário sem fricção.",
+    resultado:
+      "Fluxo de compra otimizado resultando em uma experiência de usuário sem fricção.",
     githubUrl: "https://github.com/DouglassenG/",
     siteUrl: "#",
     accentColor: "#EF4444", // Red
@@ -51,9 +57,11 @@ const projects = [
     id: 6,
     src: "/projetos/github_api.png",
     title: "Github API",
-    objetivo: "Explorador de perfis e repositórios do GitHub utilizando a API oficial da plataforma.",
+    objetivo:
+      "Explorador de perfis e repositórios do GitHub utilizando a API oficial da plataforma.",
     tecnologia: "React, Fetch API, Tailwind CSS, GitHub API",
-    resultado: "Visualização clara de métricas de desenvolvedores com busca em tempo real.",
+    resultado:
+      "Visualização clara de métricas de desenvolvedores com busca em tempo real.",
     githubUrl: "https://github.com/DouglassenG/",
     siteUrl: "#",
     accentColor: "#374151", // Gray-700
@@ -62,9 +70,11 @@ const projects = [
     id: 1,
     src: "/projetos/kr_studio.jpg",
     title: "KR Studio",
-    objetivo: "Landing page premium para estúdio de design, focada em portfólio visual e conversão.",
+    objetivo:
+      "Landing page premium para estúdio de design, focada em portfólio visual e conversão.",
     tecnologia: "HTML5, SCSS, JavaScript, Gulp",
-    resultado: "Design minimalista que destaca os trabalhos do estúdio com alta performance.",
+    resultado:
+      "Design minimalista que destaca os trabalhos do estúdio com alta performance.",
     githubUrl: "https://github.com/DouglassenG/",
     siteUrl: "#",
     accentColor: "#D97706", // Amber
@@ -73,9 +83,11 @@ const projects = [
     id: 7,
     src: "/projetos/minhas_tarefas.png",
     title: "Minhas Tarefas",
-    objetivo: "Gerenciador de tarefas produtivo com sistema de categorias e prioridades.",
+    objetivo:
+      "Gerenciador de tarefas produtivo com sistema de categorias e prioridades.",
     tecnologia: "React, Redux Toolkit, Styled Components",
-    resultado: "Interface organizada que facilita a gestão do dia a dia do usuário.",
+    resultado:
+      "Interface organizada que facilita a gestão do dia a dia do usuário.",
     githubUrl: "https://github.com/DouglassenG/",
     siteUrl: "#",
     accentColor: "#3B82F6", // Blue-500
@@ -84,9 +96,11 @@ const projects = [
     id: 9,
     src: "/projetos/sorteador.png",
     title: "Sorteador",
-    objetivo: "Aplicação simples e eficaz para realização de sorteios numéricos.",
+    objetivo:
+      "Aplicação simples e eficaz para realização de sorteios numéricos.",
     tecnologia: "HTML, CSS, JavaScript, Less",
-    resultado: "Ferramenta leve e funcional para sorteios rápidos em qualquer dispositivo.",
+    resultado:
+      "Ferramenta leve e funcional para sorteios rápidos em qualquer dispositivo.",
     githubUrl: "https://github.com/DouglassenG/",
     siteUrl: "#",
     accentColor: "#F59E0B", // Amber-500
@@ -95,9 +109,11 @@ const projects = [
     id: 10,
     src: "/projetos/todo_vue.png",
     title: "Todo Vue",
-    objetivo: "Aplicação de lista de tarefas desenvolvida para explorar o ecossistema Vue.js.",
+    objetivo:
+      "Aplicação de lista de tarefas desenvolvida para explorar o ecossistema Vue.js.",
     tecnologia: "Vue.js 3, Composition API, Vite",
-    resultado: "Demonstração de reatividade e gerenciamento de estado eficiente no Vue.",
+    resultado:
+      "Demonstração de reatividade e gerenciamento de estado eficiente no Vue.",
     githubUrl: "https://github.com/DouglassenG/",
     siteUrl: "#",
     accentColor: "#42B883", // Vue Green
@@ -108,7 +124,8 @@ const projects = [
     title: "Universo Hamburguer",
     objetivo: "Cardápio digital interativo para hamburgueria artesanal.",
     tecnologia: "HTML, CSS, JavaScript, jQuery",
-    resultado: "Experiência de escolha de produtos visualmente apetitosa e direta.",
+    resultado:
+      "Experiência de escolha de produtos visualmente apetitosa e direta.",
     githubUrl: "https://github.com/DouglassenG/",
     siteUrl: "#",
     accentColor: "#854D0E", // Brown-800
@@ -130,7 +147,8 @@ const Projetos = () => {
         </h2>
         <div className="h-1.5 w-24 bg-accent mx-auto rounded-full" />
         <p className="text-lg text-muted-foreground font-medium">
-          Uma vitrine de soluções digitais que unem design impactante e tecnologia de ponta.
+          Uma vitrine de soluções digitais que unem design impactante e
+          tecnologia de ponta.
         </p>
       </div>
 
