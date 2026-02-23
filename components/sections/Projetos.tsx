@@ -78,7 +78,6 @@ const projects = [
     siteUrl: "#",
     accentColor: "#374151", // Gray-700
   },
-
   {
     id: 7,
     src: "/projetos/minhas_tarefas.png",
