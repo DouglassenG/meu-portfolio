@@ -53,7 +53,18 @@ const projects = [
     siteUrl: "#",
     accentColor: "#EF4444", // Red
   },
-
+  {
+    id: 11,
+    src: "/projetos/universo_hamburguer.png",
+    title: "Universo Hamburguer",
+    objetivo: "Cardápio digital interativo para hamburgueria artesanal.",
+    tecnologia: "HTML, CSS, JavaScript, jQuery",
+    resultado:
+      "Experiência de escolha de produtos visualmente apetitosa e direta.",
+    githubUrl: "https://github.com/DouglassenG/",
+    siteUrl: "#",
+    accentColor: "#854D0E", // Brown-800
+  },
   {
     id: 6,
     src: "/projetos/github_api.png",
@@ -119,18 +130,6 @@ const projects = [
     githubUrl: "https://github.com/DouglassenG/",
     siteUrl: "#",
     accentColor: "#42B883", // Vue Green
-  },
-  {
-    id: 11,
-    src: "/projetos/universo_hamburguer.png",
-    title: "Universo Hamburguer",
-    objetivo: "Cardápio digital interativo para hamburgueria artesanal.",
-    tecnologia: "HTML, CSS, JavaScript, jQuery",
-    resultado:
-      "Experiência de escolha de produtos visualmente apetitosa e direta.",
-    githubUrl: "https://github.com/DouglassenG/",
-    siteUrl: "#",
-    accentColor: "#854D0E", // Brown-800
   },
 ];
 
