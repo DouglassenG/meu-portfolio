@@ -2,7 +2,13 @@
 "use client";
 
 import { Button } from "./button";
-import { Github } from "lucide-react";
+import {
+  Github,
+  ExternalLink,
+  Code2,
+  Target,
+  CheckCircle2,
+} from "lucide-react";
 
 interface ProjectCardProps {
   imageSrc: string;
@@ -12,6 +18,7 @@ interface ProjectCardProps {
   resultado: string;
   githubUrl?: string;
   siteUrl?: string;
+  accentColor?: string; // Hex or tailwind color for the project's signature
 }
 
 const ProjectCard = ({
@@ -22,52 +29,107 @@ const ProjectCard = ({
   resultado,
   githubUrl,
   siteUrl,
+  accentColor = "var(--accent)",
 }: ProjectCardProps) => {
   return (
-    <div className="flex flex-col rounded-lg overflow-hidden shadow-md border-2 border-transparent bg-card text-card-foreground p-4 sm:p-6 transition-all duration-300 hover:brightness-90">
-      <h3 className="text-lg sm:text-xl font-bold mb-4 text-center">{title}</h3>
-      {/* New 4-quadrant grid below the title */}
-      <div className="grid grid-cols-2 grid-rows-[minmax(0,1fr)_minmax(0,1fr)] gap-4 mb-4 flex-grow">
-        {/* Quadrant 1 (Top-Left): Screenshot */}
-        <div className="col-start-1 row-start-1 relative">
-          <img
-            src={imageSrc}
-            alt={title}
-            className="object-cover w-full h-full rounded-md"
-          />
-        </div>
+    <div
+      className="group relative flex flex-col h-full rounded-2xl overflow-hidden border border-border/40 bg-card/50 backdrop-blur-md transition-all duration-500 hover:shadow-2xl hover:shadow-[var(--project-color)]/20 hover:-translate-y-2"
+      style={{ "--project-color": accentColor } as React.CSSProperties}
+    >
+      {/* Dynamic Hover Border */}
+      <div className="absolute inset-0 border-2 border-transparent group-hover:border-[var(--project-color)]/40 rounded-2xl transition-colors duration-500 pointer-events-none z-10" />
 
-        {/* Quadrant 2 & 4 (Right Column - Top/Bottom): Objective and Result */}
-        <div className="col-start-2 row-span-2 flex flex-col justify-between">
-          <div>
-            <p className="text-sm text-muted-foreground mb-4">{objetivo}</p>
-          </div>
-          <div>
-            <p className="text-sm text-muted-foreground">{resultado}</p>
-          </div>
-        </div>
-
-        {/* Quadrant 3 (Bottom-Left): Technologies */}
-        <div className="col-start-1 row-start-2 flex flex-col justify-end">
-          <p className="text-sm text-muted-foreground">{tecnologia}</p>
+      {/* Image Section - Focus on Visibility */}
+      <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent z-1 opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
+        <img
+          src={imageSrc}
+          alt={title}
+          className="w-full h-full object-cover object-top transform transition-transform duration-700 group-hover:scale-110"
+        />
+        {/* Project Title Overlay on Image (Mobile/Tablet focus) */}
+        <div className="absolute bottom-4 left-6 z-2">
+          <h3 className="text-xl md:text-2xl font-bold text-white drop-shadow-lg">
+            {title}
+          </h3>
         </div>
       </div>
 
-      <div className="flex justify-center space-x-4 mt-auto">
-        {githubUrl && (
-          <a href={githubUrl} target="_blank" rel="noopener noreferrer">
-            <Button variant="outline" size="sm" className="card-btn-github">
-              <Github className="mr-2 h-4 w-4" /> GITHUB
-            </Button>
-          </a>
-        )}
-        {siteUrl && (
-          <a href={siteUrl} target="_blank" rel="noopener noreferrer">
-            <Button variant="secondary" size="sm" className="card-btn-site">
-              Visite o projeto
-            </Button>
-          </a>
-        )}
+      {/* Content Section - Balanced Grid */}
+      <div className="flex flex-col flex-grow p-6 space-y-5">
+        {/* Objective & Result Split */}
+        <div className="grid grid-cols-1 gap-4 text-pretty">
+          <div className="space-y-2">
+            <div className="flex items-center gap-2 text-[var(--project-color)] font-semibold text-xs uppercase tracking-wider">
+              <Target size={14} />
+              <span>Objetivo</span>
+            </div>
+            <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
+              {objetivo}
+            </p>
+          </div>
+
+          <div className="space-y-2">
+            <div className="flex items-center gap-2 text-emerald-500 font-semibold text-xs uppercase tracking-wider">
+              <CheckCircle2 size={14} />
+              <span>Resultado</span>
+            </div>
+            <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
+              {resultado}
+            </p>
+          </div>
+        </div>
+
+        {/* Technologies - Pill style */}
+        <div className="space-y-3">
+          <div className="flex items-center gap-2 text-muted-foreground font-semibold text-xs uppercase tracking-wider">
+            <Code2 size={14} />
+            <span>Tecnologias</span>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {tecnologia.split(",").map((tech) => (
+              <span
+                key={tech.trim()}
+                className="px-2.5 py-1 text-[10px] font-medium bg-secondary/50 border border-border/50 text-secondary-foreground rounded-full backdrop-blur-sm"
+              >
+                {tech.trim()}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Actions - Pushed to bottom */}
+        <div className="flex items-center gap-3 pt-4 mt-auto border-t border-border/20">
+          {githubUrl && (
+            <a
+              href={githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1"
+            >
+              <Button
+                variant="outline"
+                className="w-full h-10 gap-2 border-border/50 bg-background/50 hover:bg-[var(--project-color)] hover:text-white hover:border-[var(--project-color)] transition-all duration-300"
+              >
+                <Github size={16} />
+                <span className="hidden sm:inline">Código</span>
+              </Button>
+            </a>
+          )}
+          {siteUrl && (
+            <a
+              href={siteUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1"
+            >
+              <Button className="w-full h-10 gap-2 bg-[var(--project-color)] text-white hover:brightness-110 shadow-lg shadow-[var(--project-color)]/20 transition-all duration-300">
+                <ExternalLink size={16} />
+                <span className="hidden sm:inline">Demo</span>
+              </Button>
+            </a>
+          )}
+        </div>
       </div>
     </div>
   );
