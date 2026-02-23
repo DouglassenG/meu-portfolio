@@ -47,56 +47,57 @@ const ProjectCard = ({
           alt={title}
           className="w-full h-full object-cover object-top transform transition-transform duration-700 group-hover:scale-110"
         />
-        {/* Project Title Overlay on Image (Mobile/Tablet focus) */}
-        <div className="absolute bottom-4 left-6 z-2">
-          <h3 className="text-xl md:text-2xl font-bold text-white drop-shadow-lg">
-            {title}
-          </h3>
-        </div>
-      </div>
-
-      {/* Content Section - Balanced Grid */}
-      <div className="flex flex-col flex-grow p-6 space-y-5">
-        {/* Objective & Result Split */}
-        <div className="grid grid-cols-1 gap-4 text-pretty">
-          <div className="space-y-2">
-            <div className="flex items-center gap-2 text-[var(--project-color)] font-semibold text-xs uppercase tracking-wider">
-              <Target size={14} />
-              <span>Objetivo</span>
-            </div>
-            <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
-              {objetivo}
-            </p>
-          </div>
-
-          <div className="space-y-2">
-            <div className="flex items-center gap-2 text-emerald-500 font-semibold text-xs uppercase tracking-wider">
-              <CheckCircle2 size={14} />
-              <span>Resultado</span>
-            </div>
-            <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
-              {resultado}
-            </p>
-          </div>
-        </div>
-
-        {/* Technologies - Pill style */}
-        <div className="space-y-3">
-          <div className="flex items-center gap-2 text-muted-foreground font-semibold text-xs uppercase tracking-wider">
-            <Code2 size={14} />
-            <span>Tecnologias</span>
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {tecnologia.split(",").map((tech) => (
-              <span
-                key={tech.trim()}
-                className="px-2.5 py-1 text-[10px] font-medium bg-secondary/50 border border-border/50 text-secondary-foreground rounded-full backdrop-blur-sm"
-              >
-                {tech.trim()}
-              </span>
-            ))}
-          </div>
-        </div>
+                {/* Project Title Overlay on Image (Mobile/Tablet focus) */}
+                <div className="absolute bottom-4 left-6 z-2">
+                  <h3 className="text-xl md:text-2xl font-black text-foreground drop-shadow-lg tracking-tight uppercase italic">
+                    {title}
+                  </h3>
+                </div>
+              </div>
+        
+              {/* Content Section - Balanced Grid */}
+              <div className="flex flex-col flex-grow p-6 space-y-5">
+                
+                {/* Objective & Result Split */}
+                <div className="grid grid-cols-1 gap-4 text-pretty">
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2 text-[var(--project-color)]/90 font-bold text-[10px] uppercase tracking-widest">
+                      <Target size={14} />
+                      <span>Objetivo</span>
+                    </div>
+                    <p className="text-sm text-foreground/75 font-medium leading-relaxed line-clamp-3">
+                      {objetivo}
+                    </p>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2 text-emerald-400 font-bold text-[10px] uppercase tracking-widest">
+                      <CheckCircle2 size={14} />
+                      <span>Resultado</span>
+                    </div>
+                    <p className="text-sm text-foreground/75 font-medium leading-relaxed line-clamp-3">
+                      {resultado}
+                    </p>
+                  </div>
+                </div>
+        
+                {/* Technologies - Pill style */}
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2 text-foreground/40 font-bold text-[10px] uppercase tracking-widest">
+                    <Code2 size={14} />
+                    <span>Tecnologias</span>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {tecnologia.split(",").map((tech) => (
+                      <span 
+                        key={tech.trim()}
+                        className="px-2.5 py-1 text-[10px] font-bold bg-secondary/30 border border-border/20 text-foreground/80 rounded-full backdrop-blur-sm"
+                      >
+                        {tech.trim()}
+                      </span>
+                    ))}
+                  </div>
+                </div>
 
         {/* Actions - Pushed to bottom */}
         <div className="flex items-center gap-3 pt-4 mt-auto border-t border-border/20">

@@ -141,16 +141,15 @@ const Projetos = () => {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px] opacity-50" />
       </div>
 
-      <div className="mb-16 text-center space-y-4 max-w-2xl">
-        <h2 className="text-4xl md:text-6xl font-black tracking-tighter text-white uppercase italic">
-          Projetos <span className="text-accent">Selecionados</span>
-        </h2>
-        <div className="h-1.5 w-24 bg-accent mx-auto rounded-full" />
-        <p className="text-lg text-muted-foreground font-medium">
-          Uma vitrine de soluções digitais que unem design impactante e
-          tecnologia de ponta.
-        </p>
-      </div>
+            <div className="mb-16 text-center space-y-4 max-w-2xl">
+              <h2 className="text-4xl md:text-6xl font-black tracking-tighter text-foreground uppercase italic">
+                Projetos <span className="text-[var(--accent)] opacity-90">Selecionados</span>
+              </h2>
+              <div className="h-1.5 w-24 bg-accent/80 mx-auto rounded-full" />
+              <p className="text-lg text-foreground/60 font-medium leading-relaxed">
+                Uma vitrine de soluções digitais que unem design impactante e tecnologia de ponta.
+              </p>
+            </div>
 
       <div className="w-full max-w-[1200px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
         {projects.map((project) => (
