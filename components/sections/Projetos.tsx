@@ -15,17 +15,17 @@ const projects = [
     accentColor: "#7C3AED", // Violet
   },
   {
-    id: 5,
-    src: "/projetos/calculadora_imc.png",
-    title: "Calculadora IMC",
+    id: 1,
+    src: "/projetos/kr_studio.jpg",
+    title: "KR Studio",
     objetivo:
-      "Ferramenta de saúde para cálculo rápido de Índice de Massa Corporal com feedback visual instantâneo.",
-    tecnologia: "React, JavaScript, CSS Modules, Responsive Design",
+      "Landing page premium para estúdio de design, focada em portfólio visual e conversão.",
+    tecnologia: "HTML5, SCSS, JavaScript, Gulp",
     resultado:
-      "Interface intuitiva que guia o usuário através dos parâmetros de saúde de forma clara e objetiva.",
+      "Design minimalista que destaca os trabalhos do estúdio com alta performance.",
     githubUrl: "https://github.com/DouglassenG/",
     siteUrl: "#",
-    accentColor: "#10B981", // Emerald
+    accentColor: "#D97706", // Amber
   },
   {
     id: 3,
@@ -53,6 +53,7 @@ const projects = [
     siteUrl: "#",
     accentColor: "#EF4444", // Red
   },
+
   {
     id: 6,
     src: "/projetos/github_api.png",
@@ -66,19 +67,7 @@ const projects = [
     siteUrl: "#",
     accentColor: "#374151", // Gray-700
   },
-  {
-    id: 1,
-    src: "/projetos/kr_studio.jpg",
-    title: "KR Studio",
-    objetivo:
-      "Landing page premium para estúdio de design, focada em portfólio visual e conversão.",
-    tecnologia: "HTML5, SCSS, JavaScript, Gulp",
-    resultado:
-      "Design minimalista que destaca os trabalhos do estúdio com alta performance.",
-    githubUrl: "https://github.com/DouglassenG/",
-    siteUrl: "#",
-    accentColor: "#D97706", // Amber
-  },
+
   {
     id: 7,
     src: "/projetos/minhas_tarefas.png",
@@ -91,6 +80,19 @@ const projects = [
     githubUrl: "https://github.com/DouglassenG/",
     siteUrl: "#",
     accentColor: "#3B82F6", // Blue-500
+  },
+  {
+    id: 5,
+    src: "/projetos/calculadora_imc.png",
+    title: "Calculadora IMC",
+    objetivo:
+      "Ferramenta de saúde para cálculo rápido de Índice de Massa Corporal com feedback visual instantâneo.",
+    tecnologia: "React, JavaScript, CSS Modules, Responsive Design",
+    resultado:
+      "Interface intuitiva que guia o usuário através dos parâmetros de saúde de forma clara e objetiva.",
+    githubUrl: "https://github.com/DouglassenG/",
+    siteUrl: "#",
+    accentColor: "#10B981", // Emerald
   },
   {
     id: 9,
@@ -143,11 +145,13 @@ const Projetos = () => {
 
       <div className="mb-16 text-center space-y-4 max-w-2xl">
         <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-foreground uppercase drop-shadow-sm">
-          Projetos <span className="text-[var(--accent)] opacity-80">Selecionados</span>
+          Projetos{" "}
+          <span className="text-[var(--accent)] opacity-80">Selecionados</span>
         </h2>
         <div className="h-1 w-20 bg-accent/40 mx-auto rounded-full" />
         <p className="text-lg text-foreground/50 font-medium leading-relaxed max-w-lg mx-auto italic">
-          Uma vitrine de soluções digitais que unem design impactante e tecnologia de ponta.
+          Uma vitrine de soluções digitais que unem design impactante e
+          tecnologia de ponta.
         </p>
       </div>
       <div className="w-full max-w-[1200px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
