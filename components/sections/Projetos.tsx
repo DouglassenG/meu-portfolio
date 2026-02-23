@@ -19,12 +19,12 @@ const projects = [
     src: "/projetos/kr_studio.jpg",
     title: "KR Studio",
     objetivo:
-      "Landing page premium para estúdio de design, focada em portfólio visual e conversão.",
+      "Uma presença digital elegante e performática. Este projeto representa a interface web do KR Studio, focando em serviços e portfólio visual.",
     tecnologia: "HTML5, SCSS, JavaScript, Gulp",
     resultado:
-      "Design minimalista que destaca os trabalhos do estúdio com alta performance.",
-    githubUrl: "https://github.com/DouglassenG/",
-    siteUrl: "#",
+      "Otimização de assets e o uso do Vite para o bundle resultaram em um carregamento inicial (LCP) inferior a 1.5s, aumentando a retenção de usuários em dispositivos móveis.",
+    githubUrl: "https://github.com/DouglassenG/kr_studio",
+    siteUrl: "https://kr-studio.vercel.app/",
     accentColor: "#D97706", // Amber
   },
   {
@@ -36,8 +36,8 @@ const projects = [
     tecnologia: "React, Styled Components, Firebase, TMDB API",
     resultado:
       "Fidelidade visual de 95% em relação à plataforma original, com navegação fluida entre categorias.",
-    githubUrl: "https://github.com/DouglassenG/",
-    siteUrl: "#",
+    githubUrl: "https://github.com/DouglassenG/clone_disneyplus",
+    siteUrl: "https://clone-disneyplus-ruby-kappa.vercel.app/",
     accentColor: "#1E40AF", // Blue
   },
   {
