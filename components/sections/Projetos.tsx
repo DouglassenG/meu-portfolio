@@ -10,7 +10,7 @@ const projects = [
     tecnologia: "Next.js 15, React 19, Tailwind CSS, Framer Motion, TypeScript",
     resultado:
       "Aumento de 300% na velocidade de carregamento através de Code Splitting e otimização de ativos com Vite.",
-    githubUrl: "https://github.com/DouglassenG/",
+    githubUrl: "https://github.com/DouglassenG/astrologia_do_norte",
     siteUrl: "https://astrologia-do-norte.vercel.app/",
     accentColor: "#7C3AED", // Violet
   },
