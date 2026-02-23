@@ -91,6 +91,8 @@ const projects = [
     objetivo: "Placeholder para objetivo",
     tecnologia: "Placeholder para tecnologia",
     resultado: "Placeholder para resultado",
+    githubUrl: "",
+    siteUrl: "",
   },
 ];
 
