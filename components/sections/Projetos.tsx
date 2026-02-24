@@ -49,7 +49,7 @@ const projects = [
     tecnologia: "React, Redux, TypeScript, Styled Components",
     resultado:
       "Fluxo de compra otimizado resultando em uma experiência de usuário sem fricção.",
-    githubUrl: "https://github.com/DouglassenG/",
+    githubUrl: "https://github.com/DouglassenG/efood",
     siteUrl: "#",
     accentColor: "#EF4444", // Red
   },
