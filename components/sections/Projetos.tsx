@@ -61,7 +61,7 @@ const projects = [
     tecnologia: "HTML, CSS, JavaScript, jQuery",
     resultado:
       "Experiência de escolha de produtos visualmente apetitosa e direta.",
-    githubUrl: "https://github.com/DouglassenG/",
+    githubUrl: "https://github.com/DouglassenG/universo_hamburguer",
     siteUrl: "#",
     accentColor: "#854D0E", // Brown-800
   },
