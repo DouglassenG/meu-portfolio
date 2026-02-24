@@ -50,7 +50,7 @@ const projects = [
     resultado:
       "Fluxo de compra otimizado resultando em uma experiência de usuário sem fricção.",
     githubUrl: "https://github.com/DouglassenG/efood",
-    siteUrl: "#",
+    siteUrl: "https://efood-green-xi.vercel.app/",
     accentColor: "#EF4444", // Red
   },
   {
