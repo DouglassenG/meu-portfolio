@@ -62,7 +62,7 @@ const projects = [
     resultado:
       "Experiência de escolha de produtos visualmente apetitosa e direta.",
     githubUrl: "https://github.com/DouglassenG/universo_hamburguer",
-    siteUrl: "#",
+    siteUrl: "https://universo-hamburguer.vercel.app/",
     accentColor: "#854D0E", // Brown-800
   },
   {
@@ -74,8 +74,8 @@ const projects = [
     tecnologia: "React, Fetch API, Tailwind CSS, GitHub API",
     resultado:
       "Visualização clara de métricas de desenvolvedores com busca em tempo real.",
-    githubUrl: "https://github.com/DouglassenG/",
-    siteUrl: "#",
+    githubUrl: "https://github.com/DouglassenG/github_perfil",
+    siteUrl: "https://github-perfil-dmsr.vercel.app/",
     accentColor: "#374151", // Gray-700
   },
   {
@@ -87,8 +87,8 @@ const projects = [
     tecnologia: "React, Redux Toolkit, Styled Components",
     resultado:
       "Interface organizada que facilita a gestão do dia a dia do usuário.",
-    githubUrl: "https://github.com/DouglassenG/",
-    siteUrl: "#",
+    githubUrl: "https://github.com/DouglassenG/minhas-tarefas",
+    siteUrl: "https://minhas-tarefas-one-gamma.vercel.app/",
     accentColor: "#3B82F6", // Blue-500
   },
   {
@@ -113,8 +113,8 @@ const projects = [
     tecnologia: "HTML, CSS, JavaScript, Less",
     resultado:
       "Ferramenta leve e funcional para sorteios rápidos em qualquer dispositivo.",
-    githubUrl: "https://github.com/DouglassenG/",
-    siteUrl: "#",
+    githubUrl: "https://github.com/DouglassenG/projeto_react_imc",
+    siteUrl: "https://projeto-react-imc-nine.vercel.app/",
     accentColor: "#F59E0B", // Amber-500
   },
   {
@@ -126,8 +126,8 @@ const projects = [
     tecnologia: "Vue.js 3, Composition API, Vite",
     resultado:
       "Demonstração de reatividade e gerenciamento de estado eficiente no Vue.",
-    githubUrl: "https://github.com/DouglassenG/",
-    siteUrl: "#",
+    githubUrl: "https://github.com/DouglassenG/todo-vue",
+    siteUrl: "https://todo-vue-rose-beta.vercel.app/",
     accentColor: "#42B883", // Vue Green
   },
 ];
