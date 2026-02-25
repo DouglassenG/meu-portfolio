@@ -1,8 +1,6 @@
 import React from "react";
 import {
   Github,
-  Linkedin,
-  Mail,
   Code2,
   Database,
   Cpu,
@@ -11,22 +9,26 @@ import {
 } from "lucide-react";
 import { TypingText } from "@/components/ui/TypingText";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section
-      className="flex flex-col items-center justify-center min-h-screen px-4 md:px-40 py-10"
-      style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
-    >
+    <section className="relative flex flex-col items-center justify-center min-h-[calc(100vh-80px)] px-4 md:px-40 py-10 overflow-hidden">
+      {/* Background Decorative Elements */}
+      <div className="absolute inset-0 -z-10 overflow-hidden">
+        <div className="absolute top-[20%] left-[10%] w-64 h-64 bg-accent/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-[20%] right-[10%] w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+      </div>
+
       <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-[1200px] gap-10">
-        <div className="flex-1 space-y-4 flex flex-col items-center md:items-start text-center md:text-left">
+        <div className="flex-1 space-y-6 flex flex-col items-center md:items-start text-center md:text-left">
           <div className="flex flex-col items-center md:items-start w-full">
-            <h1 className="text-2xl md:text-5xl font-bold leading-tight mb-4 md:mb-0 text-gray-100 md:text-gray-50">
+            <h1 className="text-4xl md:text-7xl font-bold leading-tight mb-4 text-foreground tracking-tighter">
               <TypingText text="Douglas Michelini" speed={150} />
             </h1>
 
             <div className="flex flex-col md:flex-row items-center gap-6 md:gap-4 w-full justify-center md:justify-start">
-              <p className="text-sm md:text-lg uppercase tracking-[0.2em] md:tracking-[0.3em] font-medium text-gray-200 md:text-gray-100">
+              <p className="text-sm md:text-xl uppercase tracking-[0.2em] md:tracking-[0.3em] font-semibold text-accent">
                 <TypingText
                   text="Desenvolvedor Front-End"
                   speed={100}
@@ -35,33 +37,35 @@ const Hero = () => {
               </p>
             </div>
 
-            <div className="mt-6 md:mt-8 space-y-6 w-full max-w-lg">
-              <div className="flex gap-4 justify-center md:justify-start text-gray-200 md:text-gray-100 opacity-80">
-                <Code2 size={18} />
-                <Database size={18} />
-                <Cpu size={18} />
-                <Globe size={18} />
-                <Layers size={18} />
+            <div className="mt-8 space-y-8 w-full max-w-2xl">
+              <div className="flex gap-6 justify-center md:justify-start text-muted-foreground">
+                <Code2 size={20} className="hover:text-accent transition-colors" />
+                <Database size={20} className="hover:text-accent transition-colors" />
+                <Cpu size={20} className="hover:text-accent transition-colors" />
+                <Globe size={20} className="hover:text-accent transition-colors" />
+                <Layers size={20} className="hover:text-accent transition-colors" />
               </div>
-              <p className="text-base md:text-lg text-gray-300 md:text-gray-200 leading-relaxed text-justify md:text-left flex items-center">
+              
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
                 Transformando ideias complexas em experiências digitais fluidas.
-                Com domínio do front ao back-end, construo arquiteturas robustas
-                e interfaces intuitivas que impulsionam o sucesso do seu
-                projeto.
+                Construo arquiteturas robustas e interfaces intuitivas que impulsionam o sucesso do seu projeto.
               </p>
-              <div className="flex gap-4 justify-center md:justify-start">
+
+              <div className="flex flex-wrap gap-4 justify-center md:justify-start pt-4">
                 <a
                   href="https://github.com/DouglassenG/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Button className="btn-github">
-                    <Github className="mr-2 h-4 w-4" /> GITHUB
+                  <Button variant="default" className="h-12 px-8 rounded-full font-bold uppercase tracking-wider shadow-lg shadow-foreground/5 hover:scale-105 transition-all">
+                    <Github className="mr-2 h-5 w-5" /> GITHUB
                   </Button>
                 </a>
-                <a href="/projetos">
-                  <Button className="btn-projetos">MEUS PROJETOS</Button>
-                </a>
+                <Link href="/projetos">
+                  <Button variant="outline" className="h-12 px-8 rounded-full font-bold uppercase tracking-wider border-accent/20 hover:bg-accent/10 hover:border-accent hover:scale-105 transition-all">
+                    MEUS PROJETOS
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

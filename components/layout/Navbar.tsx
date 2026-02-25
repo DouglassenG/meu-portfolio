@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
-import { theme } from "@/src/styles";
 import { Menu, X, Github, Linkedin, Mail } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,28 +15,26 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 flex justify-between items-center py-6 px-4 md:px-40 bg-black/40 backdrop-blur-sm shadow-lg">
+      <nav className="sticky top-0 z-50 flex justify-between items-center py-4 px-4 md:px-40 bg-background/80 backdrop-blur-md border-b border-border/10 shadow-sm transition-colors duration-300">
         {/* Brand */}
-        <div
-          className="flex items-center"
-          style={{ color: theme.colors.foreground }}
-        >
-          <img
-            src="/icon.png"
-            alt="Ícone"
-            className="h-7 w-7 rounded-full object-cover "
-          />
+        <div className="flex items-center">
+          <Link href="/">
+            <img
+              src="/icon.png"
+              alt="Ícone"
+              className="h-8 w-8 rounded-full object-cover ring-2 ring-accent/20"
+            />
+          </Link>
         </div>
 
-        {/* Desktop Right Group: Menu + Social */}
+        {/* Desktop Right Group: Menu + Social + Theme */}
         <div className="hidden md:flex items-center gap-8">
-          <ul className="flex gap-8 list-none">
+          <ul className="flex gap-8 list-none m-0 p-0">
             {menuItems.map((item) => (
               <li key={item.label}>
                 <Link
                   href={item.href}
-                  className="relative text-xs uppercase tracking-widest hover:opacity-100 transition-opacity after:content-[''] after:absolute after:w-0 after:h-[2px] after:bottom-[-4px] after:left-0 after:bg-[var(--accent)] hover:after:w-full after:transition-all after:duration-300"
-                  style={{ color: theme.colors.foreground }}
+                  className="relative text-xs uppercase tracking-widest font-semibold text-foreground/70 hover:text-foreground transition-colors after:content-[''] after:absolute after:w-0 after:h-[2px] after:bottom-[-4px] after:left-0 after:bg-accent hover:after:w-full after:transition-all after:duration-300"
                 >
                   {item.label}
                 </Link>
@@ -44,58 +42,61 @@ const Navbar = () => {
             ))}
           </ul>
 
-          <div className="flex gap-6 items-center">
+          <div className="h-4 w-px bg-border/20 mx-2" />
+
+          <div className="flex gap-5 items-center">
             <a
               href="https://github.com/DouglassenG/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[var(--accent)] transition-all ease-in-out hover:scale-110 duration-500"
-              style={{ color: theme.colors.foreground }}
+              className="text-foreground/60 hover:text-accent transition-all duration-300 hover:scale-110"
             >
-              <Github size={20} />
+              <Github size={18} />
             </a>
             <a
               href="https://www.linkedin.com/in/douglas-michelini/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[var(--accent)] transition-all ease-in-out hover:scale-110 duration-500"
-              style={{ color: theme.colors.foreground }}
+              className="text-foreground/60 hover:text-accent transition-all duration-300 hover:scale-110"
             >
-              <Linkedin size={20} />
+              <Linkedin size={18} />
             </a>
             <a
               href="mailto:contatodmichelini97@gmail.com"
-              className="hover:text-[var(--accent)] transition-all ease-in-out hover:scale-110 duration-500"
-              style={{ color: theme.colors.foreground }}
+              className="text-foreground/60 hover:text-accent transition-all duration-300 hover:scale-110"
             >
-              <Mail size={20} />
+              <Mail size={18} />
             </a>
             <a
               href="https://api.whatsapp.com/send?phone=051996979539"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-green-500 transition-all ease-in-out hover:scale-110 duration-500"
-              style={{ color: theme.colors.foreground }}
+              className="hover:scale-110 transition-transform"
             >
               <img
                 src="/whatsapp.svg"
                 alt="Whatsapp"
-                width={20}
-                height={20}
-                style={{ filter: "invert(1) brightness(2)" }}
+                width={18}
+                height={18}
+                className="dark:invert dark:brightness-200 opacity-60 hover:opacity-100 transition-opacity"
               />
             </a>
           </div>
+
+          <div className="h-4 w-px bg-border/20 mx-2" />
+          
+          <ThemeToggle />
         </div>
 
-        {/* Mobile Toggle Button */}
-        <div className="md:hidden z-[70] flex items-center">
+        {/* Mobile Actions Group */}
+        <div className="md:hidden flex items-center gap-4">
+          <ThemeToggle />
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="transition-all duration-500 ease-in-out focus:outline-none text-white flex items-center"
+            className="p-2 text-foreground focus:outline-none"
             aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
           >
-            {isOpen ? <div style={{ width: 28 }} /> : <Menu size={28} />}
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </nav>
@@ -108,7 +109,7 @@ const Navbar = () => {
       >
         {/* Backdrop */}
         <div
-          className={`absolute inset-0 bg-black/60 transition-opacity duration-300 ${
+          className={`absolute inset-0 bg-background/80 backdrop-blur-sm transition-opacity duration-300 ${
             isOpen ? "opacity-100" : "opacity-0"
           }`}
           onClick={() => setIsOpen(false)}
@@ -116,80 +117,61 @@ const Navbar = () => {
 
         {/* Menu Content - Slides from Top */}
         <div
-          className={`absolute left-0 top-0 w-full shadow-2xl transition-transform duration-500 ease-in-out flex flex-col items-center p-12 bg-black/90 backdrop-blur-xl border-b border-white/5 ${
+          className={`absolute left-0 top-0 w-full shadow-2xl transition-transform duration-500 ease-in-out flex flex-col items-center p-12 bg-card border-b border-border/10 ${
             isOpen ? "translate-y-0" : "-translate-y-full"
           }`}
         >
           <button
             onClick={() => setIsOpen(false)}
-            className="absolute top-6 right-4 text-white focus:outline-none"
+            className="absolute top-6 right-4 text-foreground focus:outline-none"
             aria-label="Fechar menu"
           >
             <X size={28} />
           </button>
-          {/* Mobile Brand (Optional, but keeping for structure) */}
-          <div
-            className="flex items-center mb-10"
-            style={{ color: theme.colors.foreground }}
-          >
+
+          <div className="flex items-center mb-10">
             <img
               src="/icon.png"
               alt="Ícone"
-              className="h-7 w-7 rounded-full object-cover"
+              className="h-10 w-10 rounded-full object-cover ring-2 ring-accent/20"
             />
           </div>
 
-          {/* Menu Links */}
           <div className="flex flex-col gap-8 items-center">
             {menuItems.map((item) => (
               <Link
                 key={item.label}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="text-xs uppercase tracking-widest hover:text-[var(--accent)] transition-colors text-white"
+                className="text-sm uppercase tracking-widest font-bold text-foreground/70 hover:text-accent transition-colors"
               >
                 {item.label}
               </Link>
             ))}
           </div>
 
-          {/* Mobile Social Icons */}
           <div className="flex gap-8 mt-12">
             <a
               href="https://github.com/DouglassenG/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-[var(--accent)] transition-all ease-in-out hover:scale-110 duration-500"
+              className="text-foreground/60 hover:text-accent transition-all duration-300"
             >
-              <Github size={18} />
+              <Github size={20} />
             </a>
             <a
               href="https://www.linkedin.com/in/douglas-michelini/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-[var(--accent)] transition-all ease-in-out hover:scale-110 duration-500"
+              className="text-foreground/60 hover:text-accent transition-all duration-300"
             >
-              <Linkedin size={18} />
+              <Linkedin size={20} />
             </a>
             <a
               href="mailto:contatodmichelini97@gmail.com"
-              className="text-white hover:text-[var(--accent)] transition-all ease-in-out hover:scale-110 duration-500"
+              className="text-foreground/60 hover:text-accent transition-all duration-300"
             >
-              <Mail size={18} />
-            </a>
-            <a
-              href="https://api.whatsapp.com/send?phone=051996979539"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-green-500 transition-all ease-in-out hover:scale-110 duration-500"
-            >
-              <img
-                src="/whatsapp.svg"
-                alt="Whatsapp"
-                width={18}
-                height={18}
-                style={{ filter: "invert(1) brightness(2)" }}
-              />
+              <Mail size={20} />
             </a>
           </div>
         </div>

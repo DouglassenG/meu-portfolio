@@ -1,3 +1,4 @@
+// Exemplo de uso
 import ProjectCard from "../ui/ProjectCard";
 
 const projects = [
@@ -22,7 +23,7 @@ const projects = [
       "Uma presença digital elegante e performática. Este projeto representa a interface web do KR Studio, focando em serviços e portfólio visual.",
     tecnologia: "HTML5, SCSS, JavaScript, Gulp",
     resultado:
-      "Otimização de assets e o uso do Vite para o bundle resultaram em um carregamento inicial (LCP) inferior a 1.5s, aumentando a retenção de usuários em dispositivos móveis.",
+      "Otimização de assets e o uso do Vite para o bundle resultaram em um carregamento inicial (LCP) inferior a 1.5s.",
     githubUrl: "https://github.com/DouglassenG/kr_studio",
     siteUrl: "https://kr-studio.vercel.app/",
     accentColor: "#D97706", // Amber
@@ -99,7 +100,7 @@ const projects = [
       "Ferramenta de saúde para cálculo rápido de Índice de Massa Corporal com feedback visual instantâneo.",
     tecnologia: "React, JavaScript, CSS Modules, Responsive Design",
     resultado:
-      "Interface intuitiva que guia o usuário através dos parâmetros de saúde de forma clara e objetiva.",
+      "Interface intuitiva que guia o usuário através dos parâmetros de saúde de forma clara.",
     githubUrl: "https://github.com/DouglassenG/",
     siteUrl: "#",
     accentColor: "#10B981", // Emerald
@@ -134,25 +135,24 @@ const projects = [
 
 const Projetos = () => {
   return (
-    <section className="relative py-24 px-4 sm:px-8 md:px-16 lg:px-24 flex flex-col items-center overflow-hidden">
-      {/* Refined Background decoration - Neutral and balanced */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 pointer-events-none">
-        <div className="absolute top-[-10%] left-[10%] w-[500px] h-[500px] bg-accent/5 rounded-full blur-[140px] opacity-40 animate-pulse" />
-        <div className="absolute bottom-[-10%] right-[10%] w-[500px] h-[500px] bg-primary/5 rounded-full blur-[140px] opacity-30" />
+    <section className="relative py-24 px-4 sm:px-8 md:px-16 lg:px-24 flex flex-col items-center overflow-hidden min-h-screen">
+      {/* Background Decorative Elements */}
+      <div className="absolute inset-0 -z-10 overflow-hidden">
+        <div className="absolute top-[10%] right-[5%] w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px]" />
+        <div className="absolute bottom-[10%] left-[5%] w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px]" />
       </div>
 
-      <div className="mb-16 text-center space-y-4 max-w-2xl">
-        <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-foreground uppercase drop-shadow-sm">
-          Projetos{" "}
-          <span className="text-[var(--accent)] opacity-80">Selecionados</span>
+      <div className="mb-20 text-center space-y-6 max-w-3xl">
+        <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-foreground uppercase">
+          Projetos <span className="text-accent">Destaque</span>
         </h2>
-        <div className="h-1 w-20 bg-accent/40 mx-auto rounded-full" />
-        <p className="text-lg text-foreground/50 font-medium leading-relaxed max-w-lg mx-auto italic">
-          Uma vitrine de soluções digitais que unem design impactante e
-          tecnologia de ponta.
+        <div className="h-1.5 w-24 bg-accent mx-auto rounded-full" />
+        <p className="text-lg md:text-xl text-muted-foreground font-medium max-w-2xl mx-auto">
+          Uma seleção cuidadosa de projetos que demonstram minha expertise em construir interfaces modernas, performáticas e escaláveis.
         </p>
       </div>
-      <div className="w-full max-w-[1200px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+
+      <div className="w-full max-w-[1200px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
         {projects.map((project) => (
           <ProjectCard
             key={project.id}
