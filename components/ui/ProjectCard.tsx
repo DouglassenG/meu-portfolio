@@ -49,9 +49,9 @@ const ProjectCard = ({
         />
         {/* Technology Badge Overlay */}
         <div className="absolute bottom-4 left-4 z-20 flex flex-wrap gap-1.5 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-           <span className="px-2 py-0.5 text-[9px] font-bold bg-background/80 backdrop-blur-md text-foreground rounded-full border border-border/10">
-             Featured Project
-           </span>
+          <span className="px-2 py-0.5 text-[9px] font-bold bg-background/80 backdrop-blur-md text-foreground rounded-full border border-border/10">
+            Featured Project
+          </span>
         </div>
       </div>
 
@@ -134,9 +134,7 @@ const ProjectCard = ({
               rel="noopener noreferrer"
               className="flex-1"
             >
-              <Button 
-                className="w-full h-11 gap-2 rounded-xl bg-accent text-accent-foreground hover:brightness-110 shadow-lg shadow-accent/10 transition-all duration-300"
-              >
+              <Button className="w-full h-11 gap-2 rounded-xl bg-accent text-accent-foreground hover:brightness-110 shadow-lg shadow-accent/10 transition-all duration-300">
                 <ExternalLink size={18} />
                 <span className="font-semibold text-xs">VISITAR</span>
               </Button>
