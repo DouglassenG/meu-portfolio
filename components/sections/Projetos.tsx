@@ -94,8 +94,8 @@ const projects = [
     tecnologia: "React, JavaScript, CSS Modules, Responsive Design",
     resultado:
       "Interface intuitiva que guia o usuário através dos parâmetros de saúde de forma clara.",
-    githubUrl: "https://github.com/DouglassenG/",
-    siteUrl: "#",
+    githubUrl: "https://github.com/DouglassenG/projeto_react_imc",
+    siteUrl: "https://projeto-react-imc-nine.vercel.app/",
   },
   {
     id: 9,
@@ -106,8 +106,8 @@ const projects = [
     tecnologia: "HTML, CSS, JavaScript, Less",
     resultado:
       "Ferramenta leve e funcional para sorteios rápidos em qualquer dispositivo.",
-    githubUrl: "https://github.com/DouglassenG/projeto_react_imc",
-    siteUrl: "https://projeto-react-imc-nine.vercel.app/",
+    githubUrl: "https://github.com/DouglassenG/sorteador_grunt",
+    siteUrl: "https://sorteador-grunt-two-smoky.vercel.app/",
   },
   {
     id: 10,
@@ -138,7 +138,8 @@ const Projetos = () => {
         </h2>
         <div className="h-1.5 w-24 bg-accent mx-auto rounded-full" />
         <p className="text-lg md:text-xl text-muted-foreground font-medium max-w-2xl mx-auto">
-          Uma seleção cuidadosa de projetos que demonstram minha expertise em construir interfaces modernas, performáticas e escaláveis.
+          Uma seleção cuidadosa de projetos que demonstram minha expertise em
+          construir interfaces modernas, performáticas e escaláveis.
         </p>
       </div>
 
