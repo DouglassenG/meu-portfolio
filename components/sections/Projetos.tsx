@@ -13,7 +13,6 @@ const projects = [
       "Aumento de 300% na velocidade de carregamento através de Code Splitting e otimização de ativos com Vite.",
     githubUrl: "https://github.com/DouglassenG/astrologia_do_norte",
     siteUrl: "https://astrologia-do-norte.vercel.app/",
-    accentColor: "#7C3AED", // Violet
   },
   {
     id: 1,
@@ -26,7 +25,6 @@ const projects = [
       "Otimização de assets e o uso do Vite para o bundle resultaram em um carregamento inicial (LCP) inferior a 1.5s.",
     githubUrl: "https://github.com/DouglassenG/kr_studio",
     siteUrl: "https://kr-studio.vercel.app/",
-    accentColor: "#D97706", // Amber
   },
   {
     id: 3,
@@ -39,7 +37,6 @@ const projects = [
       "Fidelidade visual de 95% em relação à plataforma original, com navegação fluida entre categorias.",
     githubUrl: "https://github.com/DouglassenG/clone_disneyplus",
     siteUrl: "https://clone-disneyplus-ruby-kappa.vercel.app/",
-    accentColor: "#1E40AF", // Blue
   },
   {
     id: 4,
@@ -52,7 +49,6 @@ const projects = [
       "Fluxo de compra otimizado resultando em uma experiência de usuário sem fricção.",
     githubUrl: "https://github.com/DouglassenG/efood",
     siteUrl: "https://efood-green-xi.vercel.app/",
-    accentColor: "#EF4444", // Red
   },
   {
     id: 11,
@@ -64,7 +60,6 @@ const projects = [
       "Experiência de escolha de produtos visualmente apetitosa e direta.",
     githubUrl: "https://github.com/DouglassenG/universo_hamburguer",
     siteUrl: "https://universo-hamburguer.vercel.app/",
-    accentColor: "#854D0E", // Brown-800
   },
   {
     id: 6,
@@ -77,7 +72,6 @@ const projects = [
       "Visualização clara de métricas de desenvolvedores com busca em tempo real.",
     githubUrl: "https://github.com/DouglassenG/github_perfil",
     siteUrl: "https://github-perfil-dmsr.vercel.app/",
-    accentColor: "#374151", // Gray-700
   },
   {
     id: 7,
@@ -90,7 +84,6 @@ const projects = [
       "Interface organizada que facilita a gestão do dia a dia do usuário.",
     githubUrl: "https://github.com/DouglassenG/minhas-tarefas",
     siteUrl: "https://minhas-tarefas-one-gamma.vercel.app/",
-    accentColor: "#3B82F6", // Blue-500
   },
   {
     id: 5,
@@ -103,7 +96,6 @@ const projects = [
       "Interface intuitiva que guia o usuário através dos parâmetros de saúde de forma clara.",
     githubUrl: "https://github.com/DouglassenG/",
     siteUrl: "#",
-    accentColor: "#10B981", // Emerald
   },
   {
     id: 9,
@@ -116,7 +108,6 @@ const projects = [
       "Ferramenta leve e funcional para sorteios rápidos em qualquer dispositivo.",
     githubUrl: "https://github.com/DouglassenG/projeto_react_imc",
     siteUrl: "https://projeto-react-imc-nine.vercel.app/",
-    accentColor: "#F59E0B", // Amber-500
   },
   {
     id: 10,
@@ -129,7 +120,6 @@ const projects = [
       "Demonstração de reatividade e gerenciamento de estado eficiente no Vue.",
     githubUrl: "https://github.com/DouglassenG/todo-vue",
     siteUrl: "https://todo-vue-rose-beta.vercel.app/",
-    accentColor: "#42B883", // Vue Green
   },
 ];
 
@@ -163,7 +153,6 @@ const Projetos = () => {
             resultado={project.resultado}
             githubUrl={project.githubUrl}
             siteUrl={project.siteUrl}
-            accentColor={project.accentColor}
           />
         ))}
       </div>

@@ -57,12 +57,12 @@ const Hero = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Button variant="default" className="h-12 px-8 rounded-full font-bold uppercase tracking-wider shadow-lg shadow-foreground/5 hover:scale-105 transition-all">
+                  <Button variant="default" className="h-12 px-8 rounded-full font-bold uppercase tracking-wider shadow-lg shadow-foreground/5 hover:bg-background hover:text-foreground border border-transparent hover:border-foreground transition-all duration-300">
                     <Github className="mr-2 h-5 w-5" /> GITHUB
                   </Button>
                 </a>
                 <Link href="/projetos">
-                  <Button variant="outline" className="h-12 px-8 rounded-full font-bold uppercase tracking-wider border-accent/20 hover:bg-accent/10 hover:border-accent hover:scale-105 transition-all">
+                  <Button variant="outline" className="h-12 px-8 rounded-full font-bold uppercase tracking-wider border-accent/30 hover:bg-accent hover:text-accent-foreground transition-all duration-300">
                     MEUS PROJETOS
                   </Button>
                 </Link>
