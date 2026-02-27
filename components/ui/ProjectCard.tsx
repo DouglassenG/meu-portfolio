@@ -31,7 +31,7 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <div
-      className="group relative flex flex-col h-full rounded-3xl overflow-hidden border border-border/10 bg-card/40 backdrop-blur-xl transition-all duration-300 shadow-lg hover:shadow-2xl hover:border-accent/40 hover:bg-card/60"
+      className="group relative flex flex-col h-full rounded-3xl overflow-hidden border border-border/10 dark:max-md:border-border/30 bg-card/40 backdrop-blur-xl transition-all duration-300 shadow-lg hover:shadow-2xl hover:border-accent/40 hover:bg-card/60"
     >
       {/* Decorative Glow */}
       <div className="absolute top-0 right-0 -mr-20 -mt-20 w-40 h-40 bg-accent/10 blur-[60px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
@@ -117,7 +117,7 @@ const ProjectCard = ({
             >
               <Button
                 variant="outline"
-                className="w-full h-11 gap-2 rounded-xl border-border/30 bg-background text-foreground hover:bg-foreground hover:text-background transition-all duration-300"
+                className="w-full h-11 gap-2 rounded-xl border-border/30 bg-background text-foreground hover:bg-foreground hover:text-background dark:hover:bg-primary dark:hover:text-primary-foreground transition-all duration-300"
               >
                 <Github size={18} />
                 <span className="font-semibold text-xs">REPOSITÓRIO</span>
