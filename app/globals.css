@@ -95,11 +95,18 @@
   }
   body {
     @apply bg-background text-foreground transition-colors duration-500 selection:bg-accent selection:text-white;
-    background-image: 
+    min-height: 100vh;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image:
       radial-gradient(at 0% 0%, color-mix(in oklch, var(--accent), transparent 90%), transparent 50%),
       radial-gradient(at 100% 100%, color-mix(in oklch, var(--accent), transparent 92%), transparent 50%);
-    background-attachment: fixed;
-    min-height: 100vh;
+    pointer-events: none;
   }
 }
 

@@ -31,14 +31,14 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <div
-      className="group relative flex flex-col h-full rounded-3xl overflow-hidden border border-border/10 dark:max-md:border-border/30 bg-card/40 backdrop-blur-xl transition-all duration-300 shadow-lg hover:shadow-2xl hover:border-accent/40 hover:bg-card/60"
+      className="group relative flex flex-col h-full rounded-3xl overflow-hidden border border-border/10 dark:max-md:border-border/30 bg-card/40 backdrop-blur-xl transition-[box-shadow,border-color,background-color] duration-300 shadow-lg hover:shadow-2xl hover:border-accent/40 hover:bg-card/60"
     >
       {/* Decorative Glow */}
       <div className="absolute top-0 right-0 -mr-20 -mt-20 w-40 h-40 bg-accent/10 blur-[60px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
       {/* Image Section */}
       <div className="relative h-56 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent z-10 opacity-0 group-hover:opacity-40 transition-opacity duration-500" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent z-10 opacity-0 group-hover:opacity-40 transition-[opacity] duration-500" />
         <img
           src={imageSrc}
           alt={title}
@@ -62,7 +62,7 @@ const ProjectCard = ({
               {title}
             </h3>
           </div>
-          <div className="h-1 w-12 bg-border/10 rounded-full group-hover:w-full group-hover:bg-accent/30 transition-all duration-700" />
+          <div className="h-1 w-full bg-border/10 rounded-full origin-left scale-x-[0.2] group-hover:scale-x-100 group-hover:bg-accent/30 transition-[transform,background-color] duration-700" />
         </div>
 
         {/* Info Grid */}
@@ -98,7 +98,7 @@ const ProjectCard = ({
             {tecnologia.split(",").map((tech) => (
               <span
                 key={tech.trim()}
-                className="px-3 py-1 text-[10px] font-bold bg-secondary text-foreground/70 rounded-full border border-border/10 hover:border-accent/40 hover:bg-accent hover:text-accent-foreground transition-all duration-300"
+                className="px-3 py-1 text-[10px] font-bold bg-secondary text-foreground/70 rounded-full border border-border/10 hover:border-accent/40 hover:bg-accent hover:text-accent-foreground transition-[border-color,background-color,color] duration-300"
               >
                 {tech.trim()}
               </span>
@@ -131,7 +131,7 @@ const ProjectCard = ({
               rel="noopener noreferrer"
               className="flex-1"
             >
-              <Button className="w-full h-11 gap-2 rounded-xl bg-accent text-accent-foreground hover:bg-accent-foreground hover:text-accent border border-transparent hover:border-accent transition-all duration-300 shadow-lg shadow-accent/10">
+              <Button className="w-full h-11 gap-2 rounded-xl bg-accent text-accent-foreground hover:bg-accent-foreground hover:text-accent border border-transparent hover:border-accent transition-[background-color,color,border-color] duration-300 shadow-lg shadow-accent/10">
                 <ExternalLink size={18} />
                 <span className="font-semibold text-xs">VISITAR</span>
               </Button>
