@@ -27,7 +27,7 @@ const Hero = () => {
                 <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                 <p className="text-sm md:text-xl uppercase tracking-[0.2em] md:tracking-[0.3em] font-semibold text-accent">
                   <TypingText
-                    text="Desenvolvedor Front-End"
+                    text="Desenvolvedor Full Stack"
                     speed={100}
                     delay={3000}
                   />
