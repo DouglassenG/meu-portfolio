@@ -107,7 +107,7 @@ const projects = [
     resultado:
       "Ferramenta leve e funcional para sorteios rápidos em qualquer dispositivo.",
     githubUrl: "https://github.com/DouglassenG/sorteador_grunt",
-    siteUrl: "https://projeto-react-imc-nine.vercel.app/",
+    siteUrl: "https://sorteador-grunt-two-smoky.vercel.app/",
   },
   {
     id: 10,
