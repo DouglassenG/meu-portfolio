@@ -1,6 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
+import Image from "next/image";
+import React, { useMemo } from "react";
 import { Button } from "./button";
 import {
   Github,
@@ -20,7 +21,7 @@ interface ProjectCardProps {
   siteUrl?: string;
 }
 
-const ProjectCard = ({
+const ProjectCard = React.memo(function ProjectCard({
   imageSrc,
   title,
   objetivo,
@@ -28,7 +29,9 @@ const ProjectCard = ({
   resultado,
   githubUrl,
   siteUrl,
-}: ProjectCardProps) => {
+}: ProjectCardProps) {
+  const techs = useMemo(() => tecnologia.split(",").map((t) => t.trim()), [tecnologia]);
+
   return (
     <div
       className="group relative flex flex-col h-full rounded-3xl overflow-hidden border border-border/10 dark:max-md:border-border/30 bg-card/40 backdrop-blur-xl transition-[box-shadow,border-color,background-color] duration-300 shadow-lg hover:shadow-2xl hover:border-accent/40 hover:bg-card/60"
@@ -39,10 +42,12 @@ const ProjectCard = ({
       {/* Image Section */}
       <div className="relative h-56 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent z-10 opacity-0 group-hover:opacity-40 transition-[opacity] duration-500" />
-        <img
+        <Image
           src={imageSrc}
           alt={title}
-          className="w-full h-full object-cover object-top transition-transform duration-700"
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="object-cover object-top transition-transform duration-700"
         />
         {/* Technology Badge Overlay */}
         <div className="absolute bottom-4 left-4 z-20 flex flex-wrap gap-1.5 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
@@ -95,12 +100,12 @@ const ProjectCard = ({
             <span>Stack</span>
           </div>
           <div className="flex flex-wrap gap-2">
-            {tecnologia.split(",").map((tech) => (
+            {techs.map((tech) => (
               <span
-                key={tech.trim()}
+                key={tech}
                 className="px-3 py-1 text-[10px] font-bold bg-secondary text-foreground/70 rounded-full border border-border/10 hover:border-accent/40 hover:bg-accent hover:text-accent-foreground transition-[border-color,background-color,color] duration-300"
               >
-                {tech.trim()}
+                {tech}
               </span>
             ))}
           </div>
@@ -141,6 +146,6 @@ const ProjectCard = ({
       </div>
     </div>
   );
-};
+});
 
 export default ProjectCard;
