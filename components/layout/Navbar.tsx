@@ -84,7 +84,7 @@ const Navbar = () => {
           </div>
 
           <div className="h-4 w-px bg-border/20 mx-2" />
-          
+
           <ThemeToggle />
         </div>
 
