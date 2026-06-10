@@ -84,7 +84,8 @@ const Hero = () => {
                     variant="default"
                     className="h-12 px-8 rounded-full font-bold uppercase tracking-wider shadow-lg shadow-foreground/5 hover:bg-background hover:text-foreground border border-transparent hover:border-foreground transition-all duration-300"
                   >
-                    <Github className="mr-2 h-5 w-5" /> GITHUB
+                    <Github className="mr-2 h-5 w-5" />
+                    GITHUB
                   </Button>
                 </a>
                 <Link href="/projetos">
