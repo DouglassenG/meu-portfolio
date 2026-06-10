@@ -8,7 +8,16 @@ const Hero = () => {
   return (
     <section className="relative flex flex-col items-center justify-center min-h-[calc(100vh-80px)] px-4 md:px-40 py-10 overflow-hidden">
       {/* Background Decorative Elements */}
+
+      {/* Background Image + Gradient Fade */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/hero.jpg')" }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-transparent" />
+
+        {/* Decorative Blurs (mantidos) */}
         <div className="absolute top-[20%] left-[10%] w-64 h-64 bg-accent/10 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-[20%] right-[10%] w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
         <div className="absolute top-[10%] right-[15%] w-72 h-72 bg-accent/8 rounded-full blur-3xl" />
