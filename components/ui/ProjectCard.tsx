@@ -30,17 +30,18 @@ const ProjectCard = React.memo(function ProjectCard({
   githubUrl,
   siteUrl,
 }: ProjectCardProps) {
-  const techs = useMemo(() => tecnologia.split(",").map((t) => t.trim()), [tecnologia]);
+  const techs = useMemo(
+    () => tecnologia.split(",").map((t) => t.trim()),
+    [tecnologia],
+  );
 
   return (
-    <div
-      className="group relative flex flex-col h-full rounded-3xl overflow-hidden border border-border/10 dark:max-md:border-border/30 bg-card/40 backdrop-blur-xl transition-[box-shadow,border-color,background-color] duration-300 shadow-lg hover:shadow-2xl hover:border-accent/40 hover:bg-card/60"
-    >
+    <div className="group relative flex flex-col h-full rounded-3xl overflow-hidden border border-border/10 dark:max-md:border-border/30 bg-card/40 backdrop-blur-xl transition-[box-shadow,border-color,background-color] duration-300 shadow-lg hover:shadow-2xl hover:border-accent/40 hover:bg-card/60">
       {/* Decorative Glow */}
       <div className="absolute top-0 right-0 -mr-20 -mt-20 w-40 h-40 bg-accent/10 blur-[60px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
       {/* Image Section */}
-      <div className="relative h-56 overflow-hidden">
+      <div className="relative aspect-video overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent z-10 opacity-0 group-hover:opacity-40 transition-[opacity] duration-500" />
         <Image
           src={imageSrc}

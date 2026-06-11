@@ -3,7 +3,31 @@ import ProjectCard from "../ui/ProjectCard";
 
 const projects = [
   {
+    id: 1,
+    src: "/projetos/dokei.png",
+    title: "Dokei",
+    objetivo:
+      "Plataforma SaaS completa para Microempreendedores Individuais (MEIs) brasileiros, simplificando a gestão fiscal e financeira diante da reforma tributária.",
+    tecnologia: "Next.js 14, TypeScript, Tailwind CSS, Prisma, Clerk, Vercel",
+    resultado:
+      "Sistema em produção com autenticação segura, dashboard responsivo, assistente IA integrada e fluxo financeiro completo do cadastro ao relatório.",
+    githubUrl: "https://github.com/DouglassenG/dokei",
+    siteUrl: "https://dokei-web-xhrp.vercel.app/",
+  },
+  {
     id: 2,
+    src: "/projetos/industrial_dashboard.png",
+    title: "Dashboard Industrial",
+    objetivo:
+      "Painel de monitoramento em tempo real para indicadores de produção industrial, com visualização de dados interativa e responsiva.",
+    tecnologia: "React, TypeScript, Recharts, Tailwind CSS, Vite",
+    resultado:
+      "Dashboard de alta performance com gráficos dinâmicos e layout adaptável, entregando leitura instantânea de KPIs operacionais.",
+    githubUrl: "https://github.com/DouglassenG/industrial_dashboard",
+    siteUrl: "https://industrial-dashboard-web.vercel.app/",
+  },
+  {
+    id: 3,
     src: "/projetos/astrologia_do_norte.png",
     title: "Astrologia do Norte",
     objetivo:
@@ -15,7 +39,7 @@ const projects = [
     siteUrl: "https://astrologia-do-norte.vercel.app/",
   },
   {
-    id: 1,
+    id: 4,
     src: "/projetos/kr_studio.jpg",
     title: "KR Studio",
     objetivo:
@@ -27,7 +51,7 @@ const projects = [
     siteUrl: "https://kr-studio.vercel.app/",
   },
   {
-    id: 3,
+    id: 5,
     src: "/projetos/clone_disney+.png",
     title: "Clone Disney+",
     objetivo:
@@ -39,7 +63,7 @@ const projects = [
     siteUrl: "https://clone-disneyplus-ruby-kappa.vercel.app/",
   },
   {
-    id: 4,
+    id: 6,
     src: "/projetos/efood.png",
     title: "Efood",
     objetivo:
@@ -51,7 +75,7 @@ const projects = [
     siteUrl: "https://efood-green-xi.vercel.app/",
   },
   {
-    id: 11,
+    id: 7,
     src: "/projetos/universo_hamburguer.png",
     title: "Universo Hamburguer",
     objetivo: "Cardápio digital interativo para hamburgueria artesanal.",
@@ -62,7 +86,7 @@ const projects = [
     siteUrl: "https://universo-hamburguer.vercel.app/",
   },
   {
-    id: 6,
+    id: 8,
     src: "/projetos/github_api.png",
     title: "Github API",
     objetivo:
@@ -74,7 +98,7 @@ const projects = [
     siteUrl: "https://github-perfil-dmsr.vercel.app/",
   },
   {
-    id: 7,
+    id: 9,
     src: "/projetos/minhas_tarefas.png",
     title: "Minhas Tarefas",
     objetivo:
@@ -86,7 +110,7 @@ const projects = [
     siteUrl: "https://minhas-tarefas-one-gamma.vercel.app/",
   },
   {
-    id: 5,
+    id: 10,
     src: "/projetos/calculadora_imc.png",
     title: "Calculadora IMC",
     objetivo:
@@ -98,7 +122,7 @@ const projects = [
     siteUrl: "https://projeto-react-imc-nine.vercel.app/",
   },
   {
-    id: 9,
+    id: 11,
     src: "/projetos/sorteador.png",
     title: "Sorteador",
     objetivo:
@@ -110,7 +134,7 @@ const projects = [
     siteUrl: "https://sorteador-grunt-two-smoky.vercel.app/",
   },
   {
-    id: 10,
+    id: 12,
     src: "/projetos/todo_vue.png",
     title: "Todo Vue",
     objetivo:
