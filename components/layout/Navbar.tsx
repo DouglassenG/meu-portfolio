@@ -15,7 +15,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 flex justify-between items-center py-4 px-4 md:px-40 bg-background/80 backdrop-blur-md border-b border-border/10 shadow-sm transition-colors duration-300">
+      <nav className="sticky top-0 z-50 flex justify-between items-center py-4 px-4 md:px-40 bg-[rgba(10,10,10,0.88)] backdrop-blur-md border-b border-white/[0.06] shadow-sm transition-colors duration-300">
         {/* Brand */}
         <div className="flex items-center">
           <Link href="/">
@@ -34,7 +34,7 @@ const Navbar = () => {
               <li key={item.label}>
                 <Link
                   href={item.href}
-                  className="relative text-xs uppercase tracking-widest font-semibold text-foreground/70 hover:text-foreground transition-colors after:content-[''] after:absolute after:w-0 after:h-[2px] after:bottom-[-4px] after:left-0 after:bg-accent hover:after:w-full after:transition-all after:duration-300"
+                  className="relative text-xs uppercase tracking-widest font-semibold text-white/65 hover:text-white transition-colors after:content-[''] after:absolute after:w-0 after:h-[2px] after:bottom-[-4px] after:left-0 after:bg-accent hover:after:w-full after:transition-all after:duration-300"
                 >
                   {item.label}
                 </Link>
@@ -42,14 +42,14 @@ const Navbar = () => {
             ))}
           </ul>
 
-          <div className="h-4 w-px bg-border/20 mx-2" />
+          <div className="h-4 w-px bg-white/10 mx-2" />
 
           <div className="flex gap-5 items-center">
             <a
               href="https://github.com/DouglassenG/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground/60 hover:text-accent transition-all duration-300 hover:scale-110"
+              className="text-white/50 hover:text-accent transition-all duration-300 hover:scale-110"
             >
               <Github size={18} />
             </a>
@@ -57,13 +57,13 @@ const Navbar = () => {
               href="https://www.linkedin.com/in/douglas-michelini/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground/60 hover:text-accent transition-all duration-300 hover:scale-110"
+              className="text-white/50 hover:text-accent transition-all duration-300 hover:scale-110"
             >
               <Linkedin size={18} />
             </a>
             <a
               href="mailto:contatodmichelini97@gmail.com"
-              className="text-foreground/60 hover:text-accent transition-all duration-300 hover:scale-110"
+              className="text-white/50 hover:text-accent transition-all duration-300 hover:scale-110"
             >
               <Mail size={18} />
             </a>
@@ -78,12 +78,12 @@ const Navbar = () => {
                 alt="Whatsapp"
                 width={18}
                 height={18}
-                className="dark:invert dark:brightness-200 opacity-60 hover:opacity-100 transition-opacity"
+                className="invert brightness-200 opacity-50 hover:opacity-100 transition-opacity"
               />
             </a>
           </div>
 
-          <div className="h-4 w-px bg-border/20 mx-2" />
+          <div className="h-4 w-px bg-white/10 mx-2" />
 
           <ThemeToggle />
         </div>
@@ -93,7 +93,7 @@ const Navbar = () => {
           <ThemeToggle />
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="p-2 text-foreground focus:outline-none"
+            className="p-2 text-white focus:outline-none"
             aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -109,7 +109,7 @@ const Navbar = () => {
       >
         {/* Backdrop */}
         <div
-          className={`absolute inset-0 bg-background/80 backdrop-blur-sm transition-opacity duration-300 ${
+          className={`absolute inset-0 bg-black/70 backdrop-blur-sm transition-opacity duration-300 ${
             isOpen ? "opacity-100" : "opacity-0"
           }`}
           onClick={() => setIsOpen(false)}
@@ -117,13 +117,13 @@ const Navbar = () => {
 
         {/* Menu Content - Slides from Top */}
         <div
-          className={`absolute left-0 top-0 w-full shadow-2xl transition-transform duration-500 ease-in-out flex flex-col items-center p-12 bg-card border-b border-border/10 ${
+          className={`absolute left-0 top-0 w-full shadow-2xl transition-transform duration-500 ease-in-out flex flex-col items-center p-12 bg-[rgba(15,15,15,0.97)] border-b border-white/[0.06] ${
             isOpen ? "translate-y-0" : "-translate-y-full"
           }`}
         >
           <button
             onClick={() => setIsOpen(false)}
-            className="absolute top-6 right-4 text-foreground focus:outline-none"
+            className="absolute top-6 right-4 text-white focus:outline-none"
             aria-label="Fechar menu"
           >
             <X size={28} />
@@ -143,7 +143,7 @@ const Navbar = () => {
                 key={item.label}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="text-sm uppercase tracking-widest font-bold text-foreground/70 hover:text-accent transition-colors"
+                className="text-sm uppercase tracking-widest font-bold text-white/65 hover:text-accent transition-colors"
               >
                 {item.label}
               </Link>
@@ -155,7 +155,7 @@ const Navbar = () => {
               href="https://github.com/DouglassenG/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground/60 hover:text-accent transition-all duration-300"
+              className="text-white/50 hover:text-accent transition-all duration-300"
             >
               <Github size={20} />
             </a>
@@ -163,13 +163,13 @@ const Navbar = () => {
               href="https://www.linkedin.com/in/douglas-michelini/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground/60 hover:text-accent transition-all duration-300"
+              className="text-white/50 hover:text-accent transition-all duration-300"
             >
               <Linkedin size={20} />
             </a>
             <a
               href="mailto:contatodmichelini97@gmail.com"
-              className="text-foreground/60 hover:text-accent transition-all duration-300"
+              className="text-white/50 hover:text-accent transition-all duration-300"
             >
               <Mail size={20} />
             </a>
