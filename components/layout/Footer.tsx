@@ -12,7 +12,7 @@ const Footer = () => {
 
   return (
     <footer className="w-full bg-secondary py-10 px-4 md:px-40 flex flex-col items-center justify-center border-t border-accent/10">
-      <div className="w-full max-w-[1200px] flex flex-col items-center justify-center gap-8">    
+      <div className="w-full max-w-[1200px] flex flex-col items-center justify-center gap-8">
         <div className="flex gap-8 items-center">
           <a
             href="https://github.com/DouglassenG/"
@@ -46,8 +46,8 @@ const Footer = () => {
             &copy; {year} Todos os direitos reservados.
           </p>
         </div>
-        
-        <div className="h-1 w-12 bg-accent/20 rounded-full" />
+
+        <div className="h-1 w-54 bg-accent/100 rounded-full" />
       </div>
     </footer>
   );
