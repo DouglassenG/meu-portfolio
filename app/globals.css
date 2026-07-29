@@ -99,13 +99,21 @@
   }
 
   body::before {
-    content: '';
+    content: "";
     position: fixed;
     inset: 0;
     z-index: -1;
     background-image:
-      radial-gradient(at 0% 0%, color-mix(in oklch, var(--accent), transparent 90%), transparent 50%),
-      radial-gradient(at 100% 100%, color-mix(in oklch, var(--accent), transparent 92%), transparent 50%);
+      radial-gradient(
+        at 0% 0%,
+        color-mix(in oklch, var(--accent), transparent 90%),
+        transparent 50%
+      ),
+      radial-gradient(
+        at 100% 100%,
+        color-mix(in oklch, var(--accent), transparent 92%),
+        transparent 50%
+      );
     pointer-events: none;
   }
 }
@@ -136,15 +144,31 @@ button {
     inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
+.project-glass-card {
+  background: rgba(10, 10, 10, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
 .dark .hero-glass-card {
   background: rgba(10, 10, 10, 0.6);
   border-color: rgba(255, 255, 255, 0.06);
 }
 
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .animate-float {
