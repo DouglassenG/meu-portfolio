@@ -31,7 +31,7 @@ const projects = [
     src: "/projetos/agenda-medica.jpeg",
     title: "Agenda Médica",
     objetivo:
-      "Sistema de agendamento médico com autenticação segura, gerenciamento de consultas e interface responsiva.",
+      "Sistema de agendamento médico com autenticação, gerenciamento de consultas e interface responsiva.",
     tecnologia: "Python, Flask, SQLite, Docker, Pytest, Tabulator.js",
     resultado:
       "Aplicação containerizada com Docker Compose, cobertura de 8 testes automatizados e interface glassmorphism funcional.",
