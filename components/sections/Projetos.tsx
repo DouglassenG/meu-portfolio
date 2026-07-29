@@ -28,6 +28,18 @@ const projects = [
   },
   {
     id: 3,
+    src: "/projetos/agenda-medica.jpeg",
+    title: "Agenda Médica",
+    objetivo:
+      "Sistema de agendamento médico com autenticação segura, gerenciamento de consultas e interface responsiva.",
+    tecnologia: "Python, Flask, SQLite, Docker, Pytest, Tabulator.js",
+    resultado:
+      "Aplicação containerizada com Docker Compose, cobertura de 8 testes automatizados e interface glassmorphism funcional.",
+    githubUrl: "https://github.com/DouglassenG/agenda-medica",
+    siteUrl: "",
+  },
+  {
+    id: 4,
     src: "/projetos/astrologia_do_norte.png",
     title: "Astrologia do Norte",
     objetivo:
@@ -39,7 +51,7 @@ const projects = [
     siteUrl: "https://astrologia-do-norte.vercel.app/",
   },
   {
-    id: 4,
+    id: 5,
     src: "/projetos/kr_studio.jpg",
     title: "KR Studio",
     objetivo:
@@ -51,7 +63,7 @@ const projects = [
     siteUrl: "https://kr-studio.vercel.app/",
   },
   {
-    id: 5,
+    id: 6,
     src: "/projetos/clone_disney+.png",
     title: "Clone Disney+",
     objetivo:
@@ -63,7 +75,7 @@ const projects = [
     siteUrl: "https://clone-disneyplus-ruby-kappa.vercel.app/",
   },
   {
-    id: 6,
+    id: 7,
     src: "/projetos/efood.png",
     title: "Efood",
     objetivo:
@@ -75,7 +87,7 @@ const projects = [
     siteUrl: "https://efood-green-xi.vercel.app/",
   },
   {
-    id: 7,
+    id: 8,
     src: "/projetos/universo_hamburguer.png",
     title: "Universo Hamburguer",
     objetivo: "Cardápio digital interativo para hamburgueria artesanal.",
@@ -86,7 +98,7 @@ const projects = [
     siteUrl: "https://universo-hamburguer.vercel.app/",
   },
   {
-    id: 8,
+    id: 9,
     src: "/projetos/github_api.png",
     title: "Github API",
     objetivo:
@@ -98,7 +110,7 @@ const projects = [
     siteUrl: "https://github-perfil-dmsr.vercel.app/",
   },
   {
-    id: 9,
+    id: 10,
     src: "/projetos/minhas_tarefas.png",
     title: "Minhas Tarefas",
     objetivo:
@@ -110,7 +122,7 @@ const projects = [
     siteUrl: "https://minhas-tarefas-one-gamma.vercel.app/",
   },
   {
-    id: 10,
+    id: 11,
     src: "/projetos/calculadora_imc.png",
     title: "Calculadora IMC",
     objetivo:
@@ -122,7 +134,7 @@ const projects = [
     siteUrl: "https://projeto-react-imc-nine.vercel.app/",
   },
   {
-    id: 11,
+    id: 12,
     src: "/projetos/sorteador.png",
     title: "Sorteador",
     objetivo:
@@ -134,7 +146,7 @@ const projects = [
     siteUrl: "https://sorteador-grunt-two-smoky.vercel.app/",
   },
   {
-    id: 12,
+    id: 13,
     src: "/projetos/todo_vue.png",
     title: "Todo Vue",
     objetivo:
